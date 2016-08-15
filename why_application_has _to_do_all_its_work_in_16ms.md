@@ -276,3 +276,5 @@ We may use the Invalidate and Request Layout icons on the top bar, for debugging
 ![HierarchyViewer](https://github.com/RogerGold/AndroidNotes/blob/master/HierarchyViewer.png)
 
 We understood better the reasons and implications of double layout pass, and have some ideas on how to improve and profile our application layout.
+
+ref: [optimize-ui](https://developer.android.com/studio/profile/optimize-ui.html)
