@@ -45,9 +45,9 @@ I/O读写，加载图片， 等待网络， 填充视图等行为会延迟启动
 
 ![](https://github.com/RogerGold/media/blob/master/lazyLoading.PNG)
 
-调整执行顺序：
+![loading](https://github.com/RogerGold/media/blob/master/delay.PNG)
 
-![loading](https://github.com/RogerGold/media/blob/master/delay.PNG) ![loading](https://github.com/RogerGold/media/blob/master/loading.PNG)
+![loading](https://github.com/RogerGold/media/blob/master/loading.PNG)
 
 
 或者添加一个启动界面，主题，不显示白屏状态。
@@ -55,6 +55,18 @@ I/O读写，加载图片， 等待网络， 填充视图等行为会延迟启动
 ![lunachScreen](https://github.com/RogerGold/media/blob/master/lunachScreen.PNG)
 
 ![setTheme](https://github.com/RogerGold/media/blob/master/setTheme.PNG)
+XML布局优化
+此部分适用于解析、处理、绘制静态xml时的优化
 
+xml布局优化。解决方法如下：
+
+使用Include，Merge，viewStub简化布局
+使用相对布局，layer-list降低树的层级
+使用gone标签可以跳过绘制
+被遮挡的view避免重复绘制
+
+文／BlackSwift（简书作者）
+原文链接：http://www.jianshu.com/p/d97b390da87b
+著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
 ### 工具
 可以使用[Systrace](https://developer.android.com/studio/profile/systrace.html)工具来检查。
