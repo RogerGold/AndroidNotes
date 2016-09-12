@@ -37,4 +37,5 @@
 
 13.  [android 应用内存使用信息](https://github.com/RogerGold/AndroidNotes/blob/master/DiscoverMemoryUsageofApplication.md)
 
+14. [Launch Screen](https://github.com/RogerGold/AndroidNotes/blob/master/Launch_Screen.md)
 
