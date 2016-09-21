@@ -39,3 +39,4 @@
 
 14. [Launch Screen](https://github.com/RogerGold/AndroidNotes/blob/master/Launch_Screen.md)
 
+15.[了解android系统](https://github.com/RogerGold/AndroidNotes/blob/master/Understanding_Android_Operating_System.md)
