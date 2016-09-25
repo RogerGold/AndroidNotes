@@ -1,6 +1,6 @@
 # AndroidNotes
 
-1.[Eight Ways Your Android App Can Leak Memory](https://github.com/RogerGold/AndroidNotes/blob/master/Eight_Ways_Your_Android_App_Can_Leak_Memory.md)
+1. [Eight Ways Your Android App Can Leak Memory](https://github.com/RogerGold/AndroidNotes/blob/master/Eight_Ways_Your_Android_App_Can_Leak_Memory.md)
 
 2. [An important note when managing different screen height](https://github.com/RogerGold/AndroidNotes/blob/master/Managing_different_screen_height.md)
  
@@ -39,6 +39,12 @@
 
 14. [Launch Screen](https://github.com/RogerGold/AndroidNotes/blob/master/Launch_Screen.md)
 
-15.[了解android系统](https://github.com/RogerGold/AndroidNotes/blob/master/Understanding_Android_Operating_System.md)
+15. [了解android系统](https://github.com/RogerGold/AndroidNotes/blob/master/Understanding_Android_Operating_System.md)
 
-16.[Keeping a ViewGroup reference](https://github.com/RogerGold/AndroidNotes/blob/master/Keeping_a_ViewGroup_reference.md)
+16. [Keeping a ViewGroup reference](https://github.com/RogerGold/AndroidNotes/blob/master/Keeping_a_ViewGroup_reference.md)\
+17. [Understanding Android Operating System](https://github.com/RogerGold/AndroidNotes/blob/master/Understanding_Android_Operating_System.md)
+18. [An important note when managing different screen height](https://github.com/RogerGold/AndroidNotes/blob/master/Managing_different_screen_height.md)
+19. [Using Cursor Loader in Android](https://github.com/RogerGold/AndroidNotes/blob/master/UsingCursorLoaderinAndroid.md)
+20. [Thread Safety in Java](https://github.com/RogerGold/AndroidNotes/blob/master/ThreadSafetyInJava.md)
+21. [why application has to do all its work in 16 milliseconds or less for every single screen refresh.](https://github.com/RogerGold/AndroidNotes/blob/master/why_application_has%20_to_do_all_its_work_in_16ms.md)
+
