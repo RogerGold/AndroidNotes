@@ -53,7 +53,7 @@
 
 21. [why application has to do all its work in 16 milliseconds or less for every single screen refresh.](https://github.com/RogerGold/AndroidNotes/blob/master/why_application_has%20_to_do_all_its_work_in_16ms.md)
 
-22. [LeakCanary使用指南](https://github.com/RogerGold/AndroidNotes/blob/master/LeakCanary.md)\
+22. [LeakCanary使用指南](https://github.com/RogerGold/AndroidNotes/blob/master/LeakCanary.md)
 
 23. [常用的Android逆向工具](https://github.com/RogerGold/AndroidNotes/blob/master/AwesomeAndroidReverseEngineeringTools.md)
 
