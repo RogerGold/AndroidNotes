@@ -1,0 +1,2 @@
+1. get bitmap from resource
+Bitmap barcodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.name_image);
