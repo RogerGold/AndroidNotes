@@ -33,18 +33,20 @@ At runtime, the Android system uses the appropriate set of string resources base
 #### Use the String Resources
 You can reference your string resources in your source code and other XML files using the resource name defined by the <string> element's name attribute.
 In your source code, you can refer to a string resource with the syntax R.string.<string_name>. There are a variety of methods that accept a string resource this way.
-'''
-     // Get a string resource from your app's Resources
-    String hello = getResources().getString(R.string.hello_world);
-'''
-'''
-    // Or supply a string resource to a method that requires a string
-    TextView textView = new TextView(this);
-    textView.setText(R.string.hello_world);
-'''
-'''
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/hello_world" />
-'''
+
+In code:
+
+             // Get a string resource from your app's Resources
+            String hello = getResources().getString(R.string.hello_world);
+
+
+            // Or supply a string resource to a method that requires a string
+            TextView textView = new TextView(this);
+            textView.setText(R.string.hello_world);
+
+In XML: 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_world" />
+
