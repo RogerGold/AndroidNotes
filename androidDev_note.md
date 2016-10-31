@@ -93,7 +93,7 @@ Any time you reference @drawable/awesomeimage, the system selects the appropriat
 
 ### 6. Activity Lifecycle
 
-!(Lifecycle)[https://github.com/RogerGold/media/blob/master/basic_lifecycle.png]
+![Lifecycle](https://github.com/RogerGold/media/blob/master/basic_lifecycle.png)
 
 正确实现您的Activity生命周期方法可确保您的应用按照以下几种方式良好运行，包括：
 
@@ -187,7 +187,7 @@ Activity只能在三种状态之一下存在很长时间。
 
 要保存有关Activity状态的其他数据，您必须替代 onSaveInstanceState() 回调方法。当用户要离开Activity并在Activity意外销毁时向其传递将保存的 Bundle 对象时，系统会调用此方法。 如果系统必须稍后重新创建Activity实例，它会将相同的 Bundle 对象同时传递给 onRestoreInstanceState() 和 onCreate() 方法。
 
-!(lifecycle_savestate)[https://github.com/RogerGold/media/blob/master/basic_lifecycle_savestate.png]
+![lifecycle_savestate](https://github.com/RogerGold/media/blob/master/basic_lifecycle_savestate.png)
 
 当系统开始停止您的Activity时，它会 调用 onSaveInstanceState() (1)，因此，您可以指定您希望在 Activity 实例必须重新创建时保存的额外状态数据。如果Activity被销毁且必须重新创建相同的实例，系统将在 (1) 中定义的状态数据同时传递给 onCreate() 方法(2) 和 onRestoreInstanceState() 方法(3)。
 
