@@ -14,3 +14,37 @@ If you add a third view and give it a weight of 1, then the first view (with wei
 while the remaining two each get 1/4.
 - The default weight for all views is 0, so if you specify any weight value greater than 0 to only one view,
 then that view fills whatever space remains after all views are given the space they require
+
+### 3.Supporting Different Languages
+Once you’ve decided on the languages you will support, create the resource subdirectories and string resource files. For example:
+
+    MyProject/
+        res/
+           values/
+               strings.xml
+           values-es/
+               strings.xml
+           values-fr/
+               strings.xml
+               
+Add the string values for each locale into the appropriate file.
+At runtime, the Android system uses the appropriate set of string resources based on the locale currently set for the user's device.
+
+#### Use the String Resources
+You can reference your string resources in your source code and other XML files using the resource name defined by the <string> element's name attribute.
+In your source code, you can refer to a string resource with the syntax R.string.<string_name>. There are a variety of methods that accept a string resource this way.
+'''
+     // Get a string resource from your app's Resources
+    String hello = getResources().getString(R.string.hello_world);
+'''
+'''
+    // Or supply a string resource to a method that requires a string
+    TextView textView = new TextView(this);
+    textView.setText(R.string.hello_world);
+'''
+'''
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/hello_world" />
+'''
