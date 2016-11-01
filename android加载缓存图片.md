@@ -431,3 +431,152 @@ Here’s an example of retaining a LruCache object across configuration changes 
    }
    
 ### Managing Bitmap Memory
+#### Save a bitmap for later use
+The following snippet demonstrates how an existing bitmap is stored for possible later use in the sample app. When an app is running on Android 3.0 or higher and a bitmap is evicted from the LruCache, a soft reference to the bitmap is placed in a HashSet, for possible reuse later with inBitmap:
+
+  Set<SoftReference<Bitmap>> mReusableBitmaps;
+  private LruCache<String, BitmapDrawable> mMemoryCache;
+
+  // If you're running on Honeycomb or newer, create a
+  // synchronized HashSet of references to reusable bitmaps.
+  if (Utils.hasHoneycomb()) {
+      mReusableBitmaps =
+              Collections.synchronizedSet(new HashSet<SoftReference<Bitmap>>());
+  }
+
+  mMemoryCache = new LruCache<String, BitmapDrawable>(mCacheParams.memCacheSize) {
+
+      // Notify the removed entry that is no longer being cached.
+      @Override
+      protected void entryRemoved(boolean evicted, String key,
+              BitmapDrawable oldValue, BitmapDrawable newValue) {
+          if (RecyclingBitmapDrawable.class.isInstance(oldValue)) {
+              // The removed entry is a recycling drawable, so notify it
+              // that it has been removed from the memory cache.
+              ((RecyclingBitmapDrawable) oldValue).setIsCached(false);
+          } else {
+              // The removed entry is a standard BitmapDrawable.
+              if (Utils.hasHoneycomb()) {
+                  // We're running on Honeycomb or later, so add the bitmap
+                  // to a SoftReference set for possible use with inBitmap later.
+                  mReusableBitmaps.add
+                          (new SoftReference<Bitmap>(oldValue.getBitmap()));
+              }
+          }
+      }
+  ....
+  }
+
+#### Use an existing bitmap
+In the running app, decoder methods check to see if there is an existing bitmap they can use. For example:
+
+  public static Bitmap decodeSampledBitmapFromFile(String filename,
+          int reqWidth, int reqHeight, ImageCache cache) {
+
+      final BitmapFactory.Options options = new BitmapFactory.Options();
+      ...
+      BitmapFactory.decodeFile(filename, options);
+      ...
+
+      // If we're running on Honeycomb or newer, try to use inBitmap.
+      if (Utils.hasHoneycomb()) {
+          addInBitmapOptions(options, cache);
+      }
+      ...
+      return BitmapFactory.decodeFile(filename, options);
+  }
+  
+ The next snippet shows the addInBitmapOptions() method that is called in the above snippet. It looks for an existing bitmap to set as the value for inBitmap. Note that this method only sets a value for inBitmap if it finds a suitable match (your code should never assume that a match will be found):
+ 
+   private static void addInBitmapOptions(BitmapFactory.Options options,
+          ImageCache cache) {
+      // inBitmap only works with mutable bitmaps, so force the decoder to
+      // return mutable bitmaps.
+      options.inMutable = true;
+
+      if (cache != null) {
+          // Try to find a bitmap to use for inBitmap.
+          Bitmap inBitmap = cache.getBitmapFromReusableSet(options);
+
+          if (inBitmap != null) {
+              // If a suitable bitmap has been found, set it as the value of
+              // inBitmap.
+              options.inBitmap = inBitmap;
+          }
+      }
+  }
+
+  // This method iterates through the reusable bitmaps, looking for one
+  // to use for inBitmap:
+  protected Bitmap getBitmapFromReusableSet(BitmapFactory.Options options) {
+          Bitmap bitmap = null;
+
+      if (mReusableBitmaps != null && !mReusableBitmaps.isEmpty()) {
+          synchronized (mReusableBitmaps) {
+              final Iterator<SoftReference<Bitmap>> iterator
+                      = mReusableBitmaps.iterator();
+              Bitmap item;
+
+              while (iterator.hasNext()) {
+                  item = iterator.next().get();
+
+                  if (null != item && item.isMutable()) {
+                      // Check to see it the item can be used for inBitmap.
+                      if (canUseForInBitmap(item, options)) {
+                          bitmap = item;
+
+                          // Remove from reusable set so it can't be used again.
+                          iterator.remove();
+                          break;
+                      }
+                  } else {
+                      // Remove from the set if the reference has been cleared.
+                      iterator.remove();
+                  }
+              }
+          }
+      }
+      return bitmap;
+  }
+  
+Finally, this method determines whether a candidate bitmap satisfies the size criteria to be used for inBitmap:
+
+  static boolean canUseForInBitmap(
+          Bitmap candidate, BitmapFactory.Options targetOptions) {
+
+      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+          // From Android 4.4 (KitKat) onward we can re-use if the byte size of
+          // the new bitmap is smaller than the reusable bitmap candidate
+          // allocation byte count.
+          int width = targetOptions.outWidth / targetOptions.inSampleSize;
+          int height = targetOptions.outHeight / targetOptions.inSampleSize;
+          int byteCount = width * height * getBytesPerPixel(candidate.getConfig());
+          return byteCount <= candidate.getAllocationByteCount();
+      }
+
+      // On earlier versions, the dimensions must match exactly and the inSampleSize must be 1
+      return candidate.getWidth() == targetOptions.outWidth
+              && candidate.getHeight() == targetOptions.outHeight
+              && targetOptions.inSampleSize == 1;
+  }
+
+  /**
+   * A helper function to return the byte usage per pixel of a bitmap based on its configuration.
+   */
+  static int getBytesPerPixel(Config config) {
+      if (config == Config.ARGB_8888) {
+          return 4;
+      } else if (config == Config.RGB_565) {
+          return 2;
+      } else if (config == Config.ARGB_4444) {
+          return 2;
+      } else if (config == Config.ALPHA_8) {
+          return 1;
+      }
+      return 1;
+  }
+  
+### Displaying Bitmaps in Your UI
+This lesson brings together everything from previous lessons, showing you how to load multiple bitmaps into ViewPager and GridView components using a background thread and bitmap cache, while dealing with concurrency and configuration changes.
+
+#### Load Bitmaps into a ViewPager Implementation
