@@ -459,3 +459,88 @@ getCacheDir()
         // Issue SQL statement.
         db.delete(table_name, selection, selectionArgs);
 
+### 应用间的交互
+注意：如果您调用了intent，但设备上没有可用于处理intent的应用，您的应用将崩溃。
+#### 确认是否存在接收意向的应用
+
+        // Verify it resolves
+        PackageManager packageManager = getPackageManager();
+        List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
+        boolean isIntentSafe = activities.size() > 0;
+
+        // Start an activity if it's safe
+        if (isIntentSafe) {
+            startActivity(intent);
+        }else{
+         //可以为用户提供下载该应用的链接
+        }
+        
+ #### 显示应用选择器
+ 当您通过将您的 Intent 传递至 startActivity() 而开始Activity时，有多个应用响应意向，用户可以选择默认使用哪个应用。
+ 
+         Intent intent = new Intent(Intent.ACTION_SEND);
+        ...
+
+        // Always use string resources for UI text.
+        // This says something like "Share this photo with"
+        String title = getResources().getString(R.string.chooser_title);
+        // Create intent to show chooser
+        Intent chooser = Intent.createChooser(intent, title);
+
+        // Verify the intent will resolve to at least one activity
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(chooser);
+        }
+        
+#### 获取Activity的结果
+开始并不一定是单向的另一个Activity。您还可以开始另一个Activity并 接收返回的结果。要接收结果，请调用 startActivityForResult()（而不是 startActivity()）。
+
+需要向 startActivityForResult() 方法传递额外的整数参数。
+
+该整数参数是识别您的请求的“请求代码”。当您收到结果Intent 时，回调提供相同的请求代码，以便您的应用可以正确识别结果并确定如何处理它。
+
+例如，此处显示如何开始允许用户选择联系人的Activity：
+
+        static final int PICK_CONTACT_REQUEST = 1;  // The request code
+        ...
+        private void pickContact() {
+            Intent pickContactIntent = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
+            pickContactIntent.setType(Phone.CONTENT_TYPE); // Show user only contacts w/ phone numbers
+            startActivityForResult(pickContactIntent, PICK_CONTACT_REQUEST);
+        }
+     
+#### 接收结果
+
+如果您想要向调用您的Activity的Activity返回结果，只需调用 setResult() 指定结果代码和结果 Intent。当您的操作完成且用户应返回原始Activity时，调用 finish() 关闭（和销毁）您的Activity。 例如：
+
+        // Create intent to deliver some kind of result data
+        Intent result = new Intent("com.example.RESULT_ACTION", Uri.parse("content://result_uri");
+        setResult(Activity.RESULT_OK, result);
+        finish();
+        
+ 您必须始终为结果指定结果代码。通常，它为 RESULT_OK 或 RESULT_CANCELED。您之后可以根据需要为 Intent 提供额外的数据。
+ 如果您只需返回指示若干结果选项之一的整数，您可以将结果代码设置为大于 0 的任何值。 如果您使用结果代码传递整数，并且您无需包含 Intent，您可以调用 setResult() 并且仅传递结果代码。 例如：
+
+        setResult(RESULT_COLOR_RED);
+        finish();
+        
+当用户完成后续Activity并且返回时，系统会调用您的Activity onActivityResult() 的方法。此方法包括三个参数：
+- 您向 startActivityForResult() 传递的请求代码。
+- 第二个Activity指定的结果代码。如果操作成功，这是 RESULT_OK；如果用户退出或操作出于某种原因失败，则是 RESULT_CANCELED。
+- 传送结果数据的 Intent。
+
+        @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            // Check which request we're responding to
+            if (requestCode == PICK_CONTACT_REQUEST) {
+                // Make sure the request was successful
+                if (resultCode == RESULT_OK) {
+                    // The user picked a contact.
+                    // The Intent's data Uri identifies which contact was selected.
+
+                    // Do something with the contact here (bigger example below)
+                }
+            }
+        }
+        
+      
