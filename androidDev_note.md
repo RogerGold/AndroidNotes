@@ -338,3 +338,124 @@ Activity只能在三种状态之一下存在很长时间。
             transaction.commit();
 
 addToBackStack() 方法可接受可选的字符串参数，来为事务指定独一无二的名称。除非你打算使用 FragmentManager.BackStackEntry API 执行高级 Fragment 操作，否则无需使用此名称。
+
+### 数据的保存
+#### 保存键值集SharedPreferences 
+写入共享首选项：
+注意：如果您创建带 MODE_WORLD_READABLE 或 MODE_WORLD_WRITEABLE 的共享首选项文件，那么知道文件标识符 的任何其他应用都可以访问您的数据。
+要写入共享首选项文件， 请通过对您的 SharedPreferences 调用 edit() 来创建一个 SharedPreferences.Editor。
+传递您想要使用诸如 putInt() 和 putString() 方法写入的键和值。然后调用 commit() 以保存更改。
+
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.saved_high_score), newHighScore);
+        editor.commit();
+        
+共享首选项读取信息：
+
+要从共享首选项文件中检索值，请调用诸如 getInt() 和 getString() 等方法，为您想要的值提供键，并根据需要提供要在键不存在的情况下返回的默认值。 例如：
+
+        SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+        int defaultValue = getResources().getInteger(R.string.saved_high_score_default);
+        long highScore = sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);
+        
+#### 保存文件
+File 对象适合按照从开始到结束的顺序不跳过地读取或写入大量数据。 例如，它适合于图像文件或通过网络交换的任何内容。
+#### 内部和外部存储
+所有 Android 设备都有两个文件存储区域：“内部”和“外部”存储。这些名称在 Android 早期产生，当时大多数设备都提供内置的非易失性内存（内部存储），以及移动存储介质，比如微型 SD 卡（外部存储）。
+
+#### 内部存储：
+- 它始终可用。
+- 默认情况下只有您的应用可以访问此处保存的文件。
+- 当用户卸载您的应用时，系统会从内部存储中删除您的应用的所有文件。
+- 当您希望确保用户或其他应用均无法访问您的文件时，内部存储是最佳选择。
+
+在内部存储中保存文件时，您可以通过调用以下两种方法之一获取作为 File 的相应目录：
+
+getFilesDir()
+返回表示您的应用的内部目录的 File 。
+
+getCacheDir()
+返回表示您的应用临时缓存文件的内部目录的 File 。 务必删除所有不再需要的文件并对在指定时间您使用的内存量实现合理大小限制，比如，1MB。 如果在系统即将耗尽存储，它会在不进行警告的情况下删除您的缓存文件。
+
+#### 外部存储：
+- 它并非始终可用，因为用户可采用 USB 存储的形式装载外部存储，并在某些情况下会从设备中将其删除。
+- 它是全局可读的，因此此处保存的文件可能不受您控制地被读取。
+- 当用户卸载您的应用时，只有在您通过 getExternalFilesDir() 将您的应用的文件保存在目录中时，系统才会从此处删除您的应用的文件。
+- 对于无需访问限制以及您希望与其他应用共享
+
+以下方法对于确定存储可用性非常有用：
+
+        /* Checks if external storage is available for read and write */
+        public boolean isExternalStorageWritable() {
+            String state = Environment.getExternalStorageState();
+            if (Environment.MEDIA_MOUNTED.equals(state)) {
+                return true;
+            }
+            return false;
+        }
+
+        /* Checks if external storage is available to at least read */
+        public boolean isExternalStorageReadable() {
+            String state = Environment.getExternalStorageState();
+            if (Environment.MEDIA_MOUNTED.equals(state) ||
+                Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
+                return true;
+            }
+            return false;
+        }
+
+提示：尽管应用默认安装在内部存储中，但您可在您的宣示说明中指定 android:installLocation 属性，这样您的应用便可安装在在外部存储中。 当 APK 非常大且它们的外部存储空间大于内部存储时，用户更青睐这个选择。 
+
+注意：当用户卸载您的应用时，Android 系统会删除以下各项：
+- 您保存在内部存储中的所有文件
+- 您使用 getExternalFilesDir() 保存在外部存储中的所有文件。
+
+但是，您应手动删除使用 getCacheDir() 定期创建的所有缓存文件并且定期删除不再需要的其他文件。
+
+#### SQL 数据库中保存数据
+将数据保存到数据库对于重复或结构化数据（比如契约信息） 而言是理想之选。
+
+注意：通过实现 BaseColumns 接口，您的内部类可继承调用的主键字段_ID ，某些 Android 类（比如光标适配器）将需要内部类拥有该字段。 这并非必需项，但可帮助您的数据库与 Android 框架协调工作。
+
+例如，该代码段定义了单个表格的表格名称和列名称：
+
+        public final class FeedReaderContract {
+            // To prevent someone from accidentally instantiating the contract class,
+            // give it an empty constructor.
+            public FeedReaderContract() {}
+
+            /* Inner class that defines the table contents */
+            public static abstract class FeedEntry implements BaseColumns {
+                public static final String TABLE_NAME = "entry";
+                public static final String COLUMN_NAME_ENTRY_ID = "entryid";
+                public static final String COLUMN_NAME_TITLE = "title";
+                public static final String COLUMN_NAME_SUBTITLE = "subtitle";
+                ...
+            }
+        }
+        
+ SQLiteOpenHelper 类中有一组有用的 API。当您使用此类获取对您数据库的引用时，系统将只在需要之时而不是 应用启动过程中执行可能长期运行的操作：创建和更新数据库。 您只需调用 getWritableDatabase() 或 getReadableDatabase()。
+
+注意：由于它们可能长期运行，因此请确保您在后台线程中调用 getWritableDatabase() 或 getReadableDatabase() ， 比如使用 AsyncTask 或 IntentService。
+
+要使用 SQLiteOpenHelper，请创建一个 替代 onCreate()、onUpgrade() 和 onOpen() 回调方法的子类。
+
+要从数据库中读取信息，请使用 query() 方法，将其传递至选择条件和所需列。该方法结合 insert() 和 update() 的元素，除非列列表定义了您希望获取的数据，而不是希望插入的数据。 查询的结果将在 Cursor 对象中返回给您。
+
+要查看游标中的某一行，请使用 Cursor 移动方法之一，您必须在开始读取值之前始终调用这些方法。 一般情况下，您应通过调用 moveToFirst() 开始，其将“读取位置”置于结果中的第一个条目中。 对于每一行，您可以通过调用 Cursor 获取方法之一读取列的值，比如 getString() 或 getLong()。对于每种获取方法，您必须传递所需列的索引位置，您可以通过调用 getColumnIndex() 或 getColumnIndexOrThrow() 获取。例如：
+
+        cursor.moveToFirst();
+        long itemId = cursor.getLong(
+            cursor.getColumnIndexOrThrow(FeedEntry._ID)
+        );
+        
+ 要从表格中删除行，您需要提供识别行的选择条件。 数据库 API 提供了一种机制，用于创建防止 SQL 注入的选择条件。 该机制将选择规范划分为选择子句和选择参数。 该子句定义要查看的列，还允许您合并列测试。 参数是根据捆绑到子句的项进行测试的值。由于结果并未按照与常规 SQL 语句相同的方式进行处理，它不受 SQL 注入的影响。
+
+        // Define 'where' part of query.
+        String selection = FeedEntry.COLUMN_NAME_ENTRY_ID + " LIKE ?";
+        // Specify arguments in placeholder order.
+        String[] selectionArgs = { String.valueOf(rowId) };
+        // Issue SQL statement.
+        db.delete(table_name, selection, selectionArgs);
+
