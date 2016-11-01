@@ -543,4 +543,27 @@ getCacheDir()
             }
         }
         
-      
+###  System Permissions
+#### Declaring Permissions
+Every Android app runs in a limited-access sandbox. If an app needs to use resources or information outside of its own sandbox, the app has to request the appropriate permission. You declare that your app needs a permission by listing the permission in the App Manifest.
+#### Add Permissions to the Manifest
+To declare that your app needs a permission, put a <uses-permission> element in your app manifest, as a child of the top-level <manifest> element. For example, an app that needs to send SMS messages would have this line in the manifest:
+
+        <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+                package="com.example.snazzyapp">
+
+            <uses-permission android:name="android.permission.SEND_SMS"/>
+
+            <application ...>
+                ...
+            </application>
+
+        </manifest>
+ 
+ The system's behavior after you declare a permission depends on how sensitive the permission is. If the permission does not affect user privacy, the system grants the permission automatically. If the permission might grant access to sensitive user information, the system asks the user to approve the request.
+#### Requesting Permissions at Run Time
+Beginning in Android 6.0 (API level 23), users grant permissions to apps while the app is running, not when they install the app. 
+System permissions are divided into two categories, normal and dangerous:
+- Normal permissions do not directly risk the user's privacy. If your app lists a normal permission in its manifest, the system grants the permission automatically.
+- Dangerous permissions can give the app access to the user's confidential data. If your app lists a normal permission in its manifest, the system grants the permission automatically. If you list a dangerous permission, the user has to explicitly give approval to your app.
+
