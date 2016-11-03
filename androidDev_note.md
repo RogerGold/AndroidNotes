@@ -1,6 +1,45 @@
-### 1. get bitmap from resource
+### 1. 杂记
+#### 1.get bitmap from resource
 Bitmap barcodeBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.name_image);
+#### 2.PopupWindow
+点击空白处的时候让PopupWindow消失：
+  - 原本以为如果你setOutsideTouchable(true)则点击PopupWindow之外的地方PopupWindow会消失，其实这玩意儿好像一点用都没有。
+  - 要让点击PopupWindow之外的地方PopupWindow消失你需要调用setBackgroundDrawable(new BitmapDrawable());
+  - 设置背景，为了不影响样式，这个背景是空的。背景不为空但是完全透明。如此设置还能让PopupWindow在点击back的时候消失:
+        setBackgroundDrawable(new ColorDrawable(0x00000000));
+        
+在android中一个模态对话框应该是这样的：阻止屏幕上的其他View事件，且点击PopupWindow外面不会消失，但是能响应back事件（点击back消失）：
 
+        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View contentview = inflater.inflate(R.layout.popup_process, null);
+        contentview.setFocusable(true); // 这个很重要
+        contentview.setFocusableInTouchMode(true);
+        final PopupWindow popupWindow = new PopupWindow(contentview,LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+        popupWindow.setFocusable(true);
+        popupWindow.setOutsideTouchable(false);
+        contentview.setOnKeyListener(new OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    popupWindow.dismiss();
+
+                    return true;
+                }
+                return false;
+            }
+        });
+        popupWindow.showAtLocation(view,  Gravity.CENTER|Gravity.CENTER_HORIZONTAL, 0, 0);
+        
+ 必须设置宽和高，否则不显示任何东西.
+ 
+ 为了降低出现崩溃的概率，最好检查该 PopupWindow 所依赖的content是否还在，防止重复弹出多个window，可以设置一个flag，来标志是否已经弹出。
+ 
+         if(!activity.isFinishing() || !activity.isDestroyed() && flag == false){
+           //弹出PopupWindow
+           ...
+           flag = true;//标记window已经弹出
+         }
+         
 ### 2. android:layout_weight="1" android:layout_width="0dp"
 - Setting the width to zero (0dp) improves layout performance because using "wrap_content" as
 the width requires the system to calculate a width that is ultimately irrelevant because the weight 
