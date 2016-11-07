@@ -9,6 +9,7 @@ It depends on how your created your notification.
         nMgr.cancel(notifyId);
     }
 
+ NOTE: notifyId can't be 0.
  use mNotificationManager.notify to show it, Just make sure you use the same id to cancel your notification as you used when you created your notification. 
  To cancel: mNotificationManager.cancel(MY_NOTIFICATION_ID); 
  
