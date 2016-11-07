@@ -66,3 +66,5 @@
 27. [Android加载缓存图片](https://github.com/RogerGold/AndroidNotes/blob/master/android%E5%8A%A0%E8%BD%BD%E7%BC%93%E5%AD%98%E5%9B%BE%E7%89%87.md)
 
 28. [DiskLruCache.java](https://github.com/RogerGold/AndroidNotes/blob/master/DiskLruCache.md)
+
+29. [how to cancel notification](https://github.com/RogerGold/AndroidNotes/blob/master/can't_cancel_notification.md)
