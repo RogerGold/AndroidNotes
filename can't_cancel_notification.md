@@ -21,7 +21,20 @@ Then issuing
 
     notificationManager.cancel(NOTIFICATION_ID);
     
-does't work canceling the Notification & notification still appears in the status bar. In this particular case, you will solve these by 2 ways:
+does't work canceling the Notification & notification still appears in the status bar.
+because  Don't allow client applications to cancel foreground service notis.
+
+         public void More ...cancelNotificationWithTag(String pkg, String tag, int id, int userId) {
+                checkCallerIsSystemOrSameApp(pkg);
+                userId = ActivityManager.handleIncomingUser(Binder.getCallingPid(),
+                        Binder.getCallingUid(), userId, true, false, "cancelNotificationWithTag", pkg);
+                // Don't allow client applications to cancel foreground service notis.
+                cancelNotification(pkg, tag, id, 0,
+                        Binder.getCallingUid() == Process.SYSTEM_UID
+                        ? 0 : Notification.FLAG_FOREGROUND_SERVICE, false, userId);
+            }
+
+In this particular case, you will solve these by 2 ways:
 
 1> Using stopForeground( false ) inside service:
 
