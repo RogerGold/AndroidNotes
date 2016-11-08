@@ -1,4 +1,5 @@
 
+# How to cancel notification
 It depends on how your created your notification.
 
 ### 1. use mNotificationManager.notify(MY_NOTIFICATION_ID, notification) show a notification.
