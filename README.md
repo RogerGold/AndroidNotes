@@ -68,3 +68,5 @@
 28. [DiskLruCache.java](https://github.com/RogerGold/AndroidNotes/blob/master/DiskLruCache.md)
 
 29. [how to cancel notification](https://github.com/RogerGold/AndroidNotes/blob/master/can't_cancel_notification.md)
+
+30. [Object references in android](https://github.com/RogerGold/AndroidNotes/blob/master/Object_references_in_android.md)
