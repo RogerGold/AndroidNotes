@@ -61,6 +61,7 @@ The Message provides three pieces of extra information, required by the Handler 
 ![/handler_message](https://github.com/RogerGold/media/blob/master/handler_message.PNG)
 
 Message creation typically uses of one of the following Handler methods:
+
     public final Message obtainMessage()
     public final Message obtainMessage(int what)
     public final Message obtainMessage(int what, Object obj)
@@ -69,6 +70,7 @@ Message creation typically uses of one of the following Handler methods:
     
  The Message is obtained from the message pool. The supplied arguments populate the fields of the Message.
  The Handler also sets the Message’s target to itself. This allows us to chain the call as such:
+ 
      mHandler.obtainMessage(MSG_SHOW_IMAGE, mBitmap).sendToTarget();
      
  The Message pool is a LinkedList of Message objects with a maximum pool size of 50. 
@@ -76,8 +78,9 @@ Message creation typically uses of one of the following Handler methods:
  
  When posting a Runnable to the Handler via post(Runnable r), the Handler implicitly constructs a new Message. 
  It also sets the callback field to hold the Runnable.
+ 
      Message m = Message.obtain();
-    m.callback = r;
+     m.callback = r;
     
  ![](https://github.com/RogerGold/media/blob/master/thread_send_message_handler.PNG)
  
@@ -95,10 +98,11 @@ Message creation typically uses of one of the following Handler methods:
  When a Message timestamp is less than this value, the message is dispatched and processed by the Handler.
  
  The Handler offers three variations for sending a Message:
-    public final boolean sendMessageDelayed(Message msg, long delayMillis)
-    public final boolean sendMessageAtFrontOfQueue(Message msg)
-    public boolean sendMessageAtTime(Message msg, long uptimeMillis)
-    
+ 
+        public final boolean sendMessageDelayed(Message msg, long delayMillis)
+        public final boolean sendMessageAtFrontOfQueue(Message msg)
+        public boolean sendMessageAtTime(Message msg, long uptimeMillis)
+
   Sending a message with a delay sets the Message’s time field as SystemClock.uptimeMillis() + delayMillis.
   
   Messages sent with a delay have the time field set to SystemClock.uptimeMillis() + delayMillis.
@@ -357,11 +361,13 @@ Tip: Ensure that producer threads aren’t spawning several Messages, as they ma
 
 Debugging Tips:
 You can debug/dump all Messages dispatched by a Looper by attaching a LogPrinter:
+
     final Looper looper = getMainLooper();
     looper.setMessageLogging(new LogPrinter(Log.DEBUG, "Looper"));
     
 Similarly, you can debug/dump all pending Messages in a MessageQueue associated with your Handler by 
 attaching a LogPrinter to your Handler:    
+
     handler.dump(new LogPrinter(Log.DEBUG, "Handler"), "");
     
 ### Looper
@@ -438,12 +444,11 @@ The snippet below describes a typical usage pattern:
  When the HandlerThread starts, it prepared the Looper and attaches it to the thread. 
  The Looper now begins processing messages off the MessageQueue on the HandlerThread.
  
- #### Note: When the activity is destroyed, it’s important to terminate the HandlerThread. This also terminates the Looper.
+#### Note: When the activity is destroyed, it’s important to terminate the HandlerThread. This also terminates the Looper.
+### Summary
+The Android Handler plays an integral role in an Application’s lifecycle. It sets the foundation of the Half-Sync/Half-Async architectural pattern. Various internal and external sources rely on the Handler for asynchronous event dispatching, as it minimizes overhead and maintains thread safety.
  
- ### Summary
- The Android Handler plays an integral role in an Application’s lifecycle. It sets the foundation of the Half-Sync/Half-Async architectural pattern. Various internal and external sources rely on the Handler for asynchronous event dispatching, as it minimizes overhead and maintains thread safety.
- 
-  We often use the Handler as a mechanism for worker to UI thread communication, but it’s more than that.
-  The Handler appears in the IntentService, the Camera2 APIs, and many others. In these APIs, it’s used more generally to focus on communicating between arbitrary threads.
+We often use the Handler as a mechanism for worker to UI thread communication, but it’s more than that.
+The Handler appears in the IntentService, the Camera2 APIs, and many others. In these APIs, it’s used more generally to focus on communicating between arbitrary threads.
   
 We can apply this deeper understanding of the Handler to building more efficient, simple, and robust applications.
