@@ -61,7 +61,7 @@
 
 25. [View-Presenter-Model(Entity)](https://github.com/RogerGold/AndroidNotes/blob/master/Making%20good%20architecture%20on%20Android.md)
 
-26. [android开发杂记](https://github.com/RogerGold/AndroidNotes/blob/master/androidDev_note.md)
+26. [android开发基础](https://github.com/RogerGold/AndroidNotes/blob/master/androidDev_note.md)
 
 27. [Android加载缓存图片](https://github.com/RogerGold/AndroidNotes/blob/master/android%E5%8A%A0%E8%BD%BD%E7%BC%93%E5%AD%98%E5%9B%BE%E7%89%87.md)
 
