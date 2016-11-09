@@ -72,3 +72,5 @@
 30. [Object references in android](https://github.com/RogerGold/AndroidNotes/blob/master/Object_references_in_android.md)
 
 31. [SoftReferenceCache](https://github.com/RogerGold/AndroidNotes/blob/master/SoftReferenceCache.md)
+
+32. [Android Handler Internals](https://github.com/RogerGold/AndroidNotes/blob/master/Android_Handler_Internals.md)
