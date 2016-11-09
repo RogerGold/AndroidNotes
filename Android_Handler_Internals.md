@@ -343,7 +343,7 @@ Let’s update the UIHandler logic to account for these scenarios:
     
   Now, we can generalize the interaction between a MessageQueue, the Handler, and Producer Threads:
   
-  !(handler_messageQ_thread)[https://github.com/RogerGold/media/blob/master/handler_messageQ_thread.PNG]
+  ![handler_messageQ_thread](https://github.com/RogerGold/media/blob/master/handler_messageQ_thread.PNG)
   
 In the figure (above), multiple producer threads submit Messages to different Handlers. 
 However, each Handler is associated with the same Looper, so all Messages publish to the same MessageQueue. 
@@ -365,7 +365,7 @@ attaching a LogPrinter to your Handler:
     handler.dump(new LogPrinter(Log.DEBUG, "Handler"), "");
     
 ### Looper
-The [Looper](https://developer.android.com/reference/android/os/Looper.html) reads messages from the Message Queue and dispatches execution to the target Handler. 
+The (Looper)[https://developer.android.com/reference/android/os/Looper.html] reads messages from the Message Queue and dispatches execution to the target Handler. 
 Once a Message passes the dispatch barrier, it’s eligible for the Looper to read it in the next message loop. 
 The Looper blocks when no messages are eligible for dispatch. It resumes when a Message is available.
 
@@ -377,4 +377,73 @@ Calling Looper.quit terminates the Looper immediately.
 It also discards any Messages in the Message Queue that passed the dispatch barrier. 
 Calling Looper.quitSafely ensures all Messages ready for dispatch are processed before pending messages are discarded.
 
-!(Looper)[https://github.com/RogerGold/media/blob/master/looperr.PNG]
+![Looper](https://github.com/RogerGold/media/blob/master/looperr.PNG)
+
+The Looper is setup in the run() method of a Thread.
+A call to the static method Looper.prepare() checks if a preexisting Looper is associated with this Thread. 
+It does this by using the Looper’s ThreadLocal to check if a Looper object already exists. 
+If it doesn’t, a new Looper object and a new MessageQueue are created. 
+ The Android Source snippet (below) demonstrates this:  
+#### Note: The public prepare Looper method invokes prepare(true) internally.
+        private static void prepare(boolean quitAllowed) {
+            if (sThreadLocal.get() != null) {
+                throw new RuntimeException(“Only one Looper may be created per thread”);
+            }
+            sThreadLocal.set(new Looper(quitAllowed));
+        }
+ The Handler can now receive Messages and add them to the Message Queue. 
+ Executing the static Looper.loop () method will start reading the Messages off the queue.
+ Each loop iteration retrieves the next message, dispatches it to the target Handler, 
+ and recycles it back to the Message pool. Looper.
+ loop will continue this process until the Looper is terminated. 
+ The [Android Source](https://github.com/android/platform_frameworks_base/blob/e71ecb2c4df15f727f51a0e1b65459f071853e35/core/java/android/os/Looper.java#L83) snippet (below) demonstrates this:       
+ 
+         public static void loop() {
+            if (me == null) {
+                throw new RuntimeException("No Looper; Looper.prepare() wasn't called on this thread.");
+            }
+            final MessageQueue queue = me.mQueue;
+            for (;;) {
+                Message msg = queue.next(); // might block
+                if (msg == null) {
+                    // No message indicates that the message queue is quitting.
+                    return;
+                }
+                msg.target.dispatchMessage(msg);
+                msg.recycleUnchecked();
+            }
+        }
+
+It’s not necessary to create your own thread that has a Looper attached to it.
+Android provides a convenience class for this — HandlerThread.
+It extends the Thread class and manages the creation of a Looper. 
+The snippet below describes a typical usage pattern:
+
+        private final Handler handler;
+        private final HandlerThread handlerThread;
+        @Override
+        protected void onCreate(@Nullable Bundle savedInstanceState) {
+            super.onCreate();
+            handlerThread = new HandlerThread("HandlerDemo");
+            handlerThread.start();
+            handler = new CustomHandler(handlerThread.getLooper());
+        }
+        @Override
+        protected void onDestroy() {
+            super.onDestroy();
+            handlerThread.quit();
+        }
+        
+ The onCreate() method constructs a new HandlerThread.
+ When the HandlerThread starts, it prepared the Looper and attaches it to the thread. 
+ The Looper now begins processing messages off the MessageQueue on the HandlerThread.
+ 
+ #### Note: When the activity is destroyed, it’s important to terminate the HandlerThread. This also terminates the Looper.
+ 
+ ### Summary
+ The Android Handler plays an integral role in an Application’s lifecycle. It sets the foundation of the Half-Sync/Half-Async architectural pattern. Various internal and external sources rely on the Handler for asynchronous event dispatching, as it minimizes overhead and maintains thread safety.
+ 
+  We often use the Handler as a mechanism for worker to UI thread communication, but it’s more than that.
+  The Handler appears in the IntentService, the Camera2 APIs, and many others. In these APIs, it’s used more generally to focus on communicating between arbitrary threads.
+  
+We can apply this deeper understanding of the Handler to building more efficient, simple, and robust applications.
