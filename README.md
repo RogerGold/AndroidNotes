@@ -74,3 +74,5 @@
 31. [SoftReferenceCache](https://github.com/RogerGold/AndroidNotes/blob/master/SoftReferenceCache.md)
 
 32. [Android Handler Internals](https://github.com/RogerGold/AndroidNotes/blob/master/Android_Handler_Internals.md)
+
+33. [android 开发杂记](https://github.com/RogerGold/AndroidNotes/blob/master/android_dev_note.md)
