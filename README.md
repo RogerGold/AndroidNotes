@@ -78,3 +78,5 @@
 33. [android 开发杂记](https://github.com/RogerGold/AndroidNotes/blob/master/android_dev_note.md)
 
 34. [Making your Android app faster](https://github.com/RogerGold/AndroidNotes/blob/master/making_you_android_app_faster.md)
+
+35. [Android process death ](https://github.com/RogerGold/AndroidNotes/blob/master/Android_process_death%E2%80%8A.md)
