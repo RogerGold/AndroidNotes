@@ -34,6 +34,7 @@ support this, simply by using the HTML tags as you would in a Web page:
     </resources>
     
 ### CDATA. CDATA Run. Run, DATA, Run.
+
 Since a strings resource XML file is an XML file, if your message contains <, >, or &
 characters (other than the formatting tags listed above), you will need to use a CDATA
 section:
@@ -52,7 +53,9 @@ section:
     ]]>
     </string>
     
+    
 ### The Directory Name
+
 Our string resources in our stub project are in the res/values/strings.xml file.
 Since this directory name (values) has no suffixes, the string resources in that
 directory will be valid for any sort of situation, including any locale for the device.
