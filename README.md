@@ -82,3 +82,5 @@
 35. [Android process death ](https://github.com/RogerGold/AndroidNotes/blob/master/Android_process_death%E2%80%8A.md)
 
 36. [Android: draw a custom view](https://github.com/RogerGold/AndroidNotes/blob/master/Android_draw_a_custom_view.md)
+
+37. [android Strings](https://github.com/RogerGold/AndroidNotes/blob/master/android_Strings.md)
