@@ -25,8 +25,11 @@ this string, and a single text element containing the text of the string:
    
 ### Styled Text
 Many things in Android can display rich text, where the text has been formatted
-using some lightweight HTML markup: <b>, <i>, and <u>. Your string resources
-support this, simply by using the HTML tags as you would in a Web page:
+using some lightweight HTML markup:
+
+        <b>, <i>, and <u>.
+ 
+Your string resources support this, simply by using the HTML tags as you would in a Web page:
 
     <resources>
     <string name="b">This has <b>bold</b> in it.</string>
