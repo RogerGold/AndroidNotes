@@ -139,7 +139,7 @@ Any time you reference @drawable/awesomeimage, the system selects the appropriat
     }
  
  
- ###  The Case of the Invisible Activity
+###  The Case of the Invisible Activity
  
 You have two ways of setting up an invisible activity, both involving using a
 particular android:theme value on the &lt; activity &gt; element.
