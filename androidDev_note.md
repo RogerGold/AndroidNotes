@@ -101,14 +101,16 @@ Activity只能在三种状态之一下存在很长时间。
 当系统开始停止您的Activity时，它会 调用 onSaveInstanceState() (1)，因此，您可以指定您希望在 Activity 实例必须重新创建时保存的额外状态数据。如果Activity被销毁且必须重新创建相同的实例，系统将在 (1) 中定义的状态数据同时传递给 onCreate() 方法(2) 和 onRestoreInstanceState() 方法(3)。
 
 ### Stick to the Pairs
-If you initialize something in onCreate(), clean it up in onDestroy().
-If you initialize something in onStart(), clean it up in onStop().
-If you initialize something in onResume(), clean it up in onPause().
+- If you initialize something in onCreate(), clean it up in onDestroy().
+= If you initialize something in onStart(), clean it up in onStop().
+- If you initialize something in onResume(), clean it up in onPause().
+
 In other words, stick to the pairs. For example, do not initialize something in
 onStart() and try to clean it up in onPause(), as there are scenarios where
 onPause() may be called multiple times in succession (i.e., user brings up a non-fullscreen
 activity, which triggers onPause() but not onStop(), and hence not
 onStart()).
+
 Which pairs of lifecycle methods you choose is up to you, depending upon your
 needs. You may decide that you need two pairs (e.g., onCreate()/onDestroy() and
 onResume()/onPause()). Just do not mix and match between them.
