@@ -136,4 +136,32 @@ Any time you reference @drawable/awesomeimage, the system selects the appropriat
     private int dip2px(Context context, float dipValue){
       final float scale = context.getResource().getDisplayMetrics().density;
       return (int)(dipValue * scale = 0.5f);
-    }
+    }
+ 
+ 
+ ###  The Case of the Invisible Activity
+ 
+You have two ways of setting up an invisible activity, both involving using a
+particular android:theme value on the &lt; activity &gt; element.
+
+The most efficient option is to use Theme.NoDisplay. With this value, Android does
+nothing in terms of setting up a UI for you. However, the key limitation is that all
+the work the activity is going to do needs to be completed in onCreate(), and in
+there you need to call finish() to trigger the activity to be destroyed. Most of the
+time, this will work just fine
+
+Occasionally, you need an invisible activity that has to hang around for a few
+seconds, perhaps waiting on some callback result, before it can be destroyed. Using
+Theme.NoDisplay will still work
+
+On Android 6.0 and higher, using Theme.NoDisplay without calling finish() in onCreate() (or,
+technically, before onResume()) will crash your app.
+
+The workaround is to use Theme.Translucent.NoTitleBar. This actually does
+allocate a UI for you, but sets it up to have a transparent background and no action
+bar. The user may still perceive that the activity is around — for example, it will
+show up in the overview screen (a.k.a., recent-tasks list). Also, since the activity is
+“really there”, the user may not be able to interact with whatever the user can see,
+such as the underlying home screen. But, if the activity can finish() itself quickly,
+and is interacting with the user in the meantime (e.g., displaying some system
+dialog), you may be able to get away with this approach.
