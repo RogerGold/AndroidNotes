@@ -102,7 +102,7 @@ Activity只能在三种状态之一下存在很长时间。
 
 ### Stick to the Pairs
 - If you initialize something in onCreate(), clean it up in onDestroy().
-= If you initialize something in onStart(), clean it up in onStop().
+- If you initialize something in onStart(), clean it up in onStop().
 - If you initialize something in onResume(), clean it up in onPause().
 
 In other words, stick to the pairs. For example, do not initialize something in
