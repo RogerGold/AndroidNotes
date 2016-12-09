@@ -84,3 +84,4 @@
 36. [Android: draw a custom view](https://github.com/RogerGold/AndroidNotes/blob/master/Android_draw_a_custom_view.md)
 
 37. [android Strings](https://github.com/RogerGold/AndroidNotes/blob/master/android_Strings.md)
+38. [检查手机有没有root权限](https://github.com/RogerGold/AndroidNotes/blob/master/%E6%A3%80%E6%9F%A5android%E6%89%8B%E6%9C%BA%E6%9C%89%E6%B2%A1%E6%9C%89root.md)
