@@ -114,12 +114,14 @@ With “MODE_PRIVATE” you can be sure that only your app can read and write in
      SharedPreferences prefs = new SecurePreferences(context, "userpassword", "my_user_prefs.xml");
      
 This is what it looks like after the encryption:
+
       <map>
           <string name="TuwbBU0IrAyL9znGBJ87uEi7pW0FwYwX8SZiiKnD2VZ7">
          pD2UhS2K2MNjWm8KzpFrag==:MWm7NgaEhvaxAvA9wASUl0HUHCVBWkn3c2T1WoSAE/g=rroijgeWEGRDFSS/hg
           </string>
           <string name="8lqCQqn73Uo84Rj">k73tlfVNYsPshll19ztma7U>
       </map>    
+      
 ### Keys
 Next problem is where to store the key for your algorithm.
 It is a common problem and there is no best answer. No matter where you hide your key, 
