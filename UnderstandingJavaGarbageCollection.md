@@ -6,7 +6,7 @@
  The interrupted tasks will resume only after the GC task has completed. 
  GC tuning often means reducing this stop-the-world time.
  
- ### Generational Garbage Collection 
+### Generational Garbage Collection 
  Java does not explicitly specify a memory and remove it in the program code. 
  Some people sets the relevant object to null or use System.gc() method to remove the memory explicitly.
  Setting it to null is not a big deal,
