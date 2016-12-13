@@ -88,3 +88,5 @@
 39. [android_security(Android安全)](https://github.com/RogerGold/AndroidNotes/blob/master/android_security.md)
 
 40. [Understanding Java Garbag eCollection](https://github.com/RogerGold/AndroidNotes/blob/master/UnderstandingJavaGarbageCollection.md)
+
+41. [How to Monitor Java Garbage Collection](https://github.com/RogerGold/AndroidNotes/blob/master/HowtoMonitorJavaGarbageCollection.md)
