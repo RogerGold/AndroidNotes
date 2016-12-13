@@ -92,3 +92,8 @@
 41. [How to Monitor Java Garbage Collection](https://github.com/RogerGold/AndroidNotes/blob/master/HowtoMonitorJavaGarbageCollection.md)
 
 42. [How to Tune Java Garbage Collection](http://www.cubrid.org/blog/dev-platform/how-to-tune-java-garbage-collection/)
+
+43. [Understanding Java Garbage Collection and What You Can Do about It](https://www.infoq.com/presentations/Understanding-Java-Garbage-Collection)
+44. [Understanding Memory Management](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/garbage_collect.html)
+45. [JVM Internals](http://blog.jamesdbloom.com/JVMInternals.html)
+46. [Understanding JVM Internals](http://www.cubrid.org/blog/dev-platform/understanding-jvm-internals/)
