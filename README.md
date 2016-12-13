@@ -90,3 +90,5 @@
 40. [Understanding Java Garbag eCollection](https://github.com/RogerGold/AndroidNotes/blob/master/UnderstandingJavaGarbageCollection.md)
 
 41. [How to Monitor Java Garbage Collection](https://github.com/RogerGold/AndroidNotes/blob/master/HowtoMonitorJavaGarbageCollection.md)
+
+42. [How to Tune Java Garbage Collection](http://www.cubrid.org/blog/dev-platform/how-to-tune-java-garbage-collection/)
