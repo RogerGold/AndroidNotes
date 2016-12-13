@@ -98,3 +98,72 @@ But please remember that after the objects are first created in the Eden space,
 and the long-surviving objects are moved to the old generation through the Survivor space.
 
 ### GC for the Old Generation
+The old generation basically performs a GC when the data is full. 
+The execution procedure varies by the GC type, so it would be easier to understand if you know different types of GC.
+
+According to JDK 7, there are 5 GC types. 
+- Serial GC
+- Parallel GC
+- Parallel Old GC (Parallel Compacting GC)
+- Concurrent Mark & Sweep GC  (or "CMS")
+- Garbage First (G1) GC
+
+Among these, the serial GC must not be used on an operating server. 
+This GC type was created when there was only one CPU core on desktop computers.
+Using this serial GC will drop the application performance significantly. 
+
+Now let's learn about each GC type.
+### Serial GC (-XX:+UseSerialGC)
+The GC in the young generation uses the type we explained in the previous paragraph. The GC in the old generation uses an algorithm called "mark-sweep-compact."
+
+1. The first step of this algorithm is to mark the surviving objects in the old generation.
+2. Then, it checks the heap from the front and leaves only the surviving ones behind (sweep).
+3. In the last step, it fills up the heap from the front with the objects so that the objects are piled up consecutively, and divides the heap into two parts: one with objects and one without objects (compact).
+
+The serial GC is suitable for a small memory and a small number of CPU cores.
+
+### Parallel GC (-XX:+UseParallelGC)
+
+![SerialGC_ParallelGC](https://github.com/RogerGold/media/blob/master/SerialGC_ParallelGC.PNG)
+
+From the picture, you can easily see the difference between the serial GC and parallel GC. While the serial GC uses only one thread to process a GC, the parallel GC uses several threads to process a GC, and therefore, faster. This GC is useful when there is enough memory and a large number of cores. It is also called the "throughput GC." 
+
+### Parallel Old GC(-XX:+UseParallelOldGC)
+Parallel Old GC was supported since JDK 5 update. Compared to the parallel GC, the only difference is the GC algorithm for the old generation. It goes through three steps: mark – summary – compaction. The summary step identifies the surviving objects separately for the areas that the GC have previously performed, and thus different from the sweep step of the mark-sweep-compact algorithm. It goes through a little more complicated steps.
+
+### CMS GC (-XX:+UseConcMarkSweepGC)
+
+![CMS_GC](https://github.com/RogerGold/media/blob/master/CMS_GC%20.PNG)
+
+As you can see from the picture, the Concurrent Mark-Sweep GC is much more complicated than any other GC types that I have explained so far.
+
+1. The early initial mark step is simple. The surviving objects among the objects the closest to the classloader are searched.So, the pausing time is very short. 
+2. In the concurrent mark step, the objects referenced by the surviving objects that have just been confirmed are tracked and checked. The difference of this step is that it proceeds while other threads are processed at the same time. 
+3. In the remark step, the objects that were newly added or stopped being referenced in the concurrent mark step are checked. 
+4. Lastly, in the concurrent sweep step, the garbage collection procedure takes place. The garbage collection is carried out while other threads are still being processed. 
+
+Since this GC type is performed in this manner, the pausing time for GC is very short. The CMS GC is also called the low latency GC, and is used when the response time from all applications is crucial. 
+
+While this GC type has the advantage of short stop-the-world time, it also has the following disadvantages.
+- It uses more memory and CPU than other GC types.
+- The compaction step is not provided by default.
+
+You need to carefully review before using this type. Also, if the compaction task needs to be carried out because of the many memory fragments, the stop-the-world time can be longer than any other GC types. You need to check how often and how long the compaction task is carried out.
+
+### G1 GC
+Finally, let's learn about the garbage first (G1) GC. 
+![G1_GC](https://github.com/RogerGold/media/blob/master/G1_GC.PNG)
+
+If you want to understand G1 GC, forget everything you know about the young generation and the old generation.
+
+As you can see in the picture, one object is allocated to each grid, and then a GC is executed. Then, once one area is full, the objects are allocated to another area, and then a GC is executed. The steps where the data moves from the three spaces of the young generation to the old generation cannot be found in this GC type. This type was created to replace the CMS GC, which has causes a lot of issues and complaints in the long term.
+
+The biggest advantage of the G1 GC is its performance. It is faster than any other GC types that we have discussed so far. 
+But in JDK 6, this is called an early access and can be used only for a test. It is officially included in JDK 7. In my personal opinion, we need to go through a long test period (at least 1 year) before NHN can use JDK7 in actual services, so you probably should wait a while. Also, I heard a few times that a JVM crash occurred after applying the G1 in JDK 6. Please wait until it is more stable.
+
+I will talk about the GC tuning in the next issue, but I would like to ask you one thing in advance. If the size and the type of all objects created in the application are identical, all the GC options for WAS used in our company can be the same.
+
+But the size and the lifespan of the objects created by WAS vary depending on the service, and the type of equipment varies as well. In other words, just because a certain service uses the GC option "A," it does not mean that the same option will bring the best results for a different service. 
+
+It is necessary to find the best values for the WAS threads, WAS instances for each equipment and each GC option by constant tuning and monitoring. This did not come from my personal experience, but from the discussion of the engineers making Oracle JVM for JavaOne 2010.
+
