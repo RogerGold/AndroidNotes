@@ -97,3 +97,4 @@
 44. [Understanding Memory Management](https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/garbage_collect.html)
 45. [JVM Internals](http://blog.jamesdbloom.com/JVMInternals.html)
 46. [Understanding JVM Internals](http://www.cubrid.org/blog/dev-platform/understanding-jvm-internals/)
+47. [android colors](https://github.com/RogerGold/AndroidNotes/blob/master/colors.xml)
