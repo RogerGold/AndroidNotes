@@ -103,7 +103,7 @@ Once you have it set up, our code becomes:
  the type is automatically inferred from the data URI using getContentResolver().getType(uriToImage). 
  Since FileProvider returns the correct mime type automatically, we don’t need to manually specify a mime type at all.
  
- ### Receiving files
+### Receiving files
 Receiving files isn’t too different from text because you’re still going to use ShareCompat.IntentReader.
 For example, to make a Bitmap out of an incoming file, it would look like:
 
