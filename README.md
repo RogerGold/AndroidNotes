@@ -99,3 +99,4 @@
 46. [Understanding JVM Internals](http://www.cubrid.org/blog/dev-platform/understanding-jvm-internals/)
 47. [android colors](https://github.com/RogerGold/AndroidNotes/blob/master/colors.xml)
 48. [StrictMode for Runtime Analysis on Android](https://github.com/RogerGold/AndroidNotes/blob/master/StrictMode.md)
+49. [Sharing Content between Android apps](https://github.com/RogerGold/AndroidNotes/blob/master/Sharing_Content_between_Android_apps.md)
