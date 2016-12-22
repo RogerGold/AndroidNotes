@@ -98,3 +98,4 @@
 45. [JVM Internals](http://blog.jamesdbloom.com/JVMInternals.html)
 46. [Understanding JVM Internals](http://www.cubrid.org/blog/dev-platform/understanding-jvm-internals/)
 47. [android colors](https://github.com/RogerGold/AndroidNotes/blob/master/colors.xml)
+48. [StrictMode for Runtime Analysis on Android](https://github.com/RogerGold/AndroidNotes/blob/master/StrictMode.md)
