@@ -124,3 +124,5 @@ For example, to make a Bitmap out of an incoming file, it would look like:
  ref: [ShareCompat](https://developer.android.com/reference/android/support/v4/app/ShareCompat.html?utm_campaign=android_series_sharingcontent_012116&utm_source=medium&utm_medium=blog)
  
  ref:[FileProvider](https://developer.android.com/reference/android/support/v4/content/FileProvider.html?utm_campaign=android_series_sharingcontent_012116&utm_source=medium&utm_medium=blog)
+
+ref :[youtube](https://www.youtube.com/watch?v=C28pvd2plBA)
