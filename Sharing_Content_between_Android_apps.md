@@ -56,7 +56,7 @@ And to actually extract the information from the Intent, the useful [ShareCompat
       // Compose an email
     }
   
- ### Sharing files and images
+### Sharing files and images
 While sending and receiving text is straightforward enough (create text, include it in Intent), 
 sending files (and particularly images — the most common type by far) has an additional wrinkle:
 file permissions.The simplest code you might try might look like
