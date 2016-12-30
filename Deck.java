@@ -54,7 +54,7 @@ public class Deck {
         for (int i = 0; i < PLAYERS * CARDS_PER_PLAYER; i++) {
             System.out.println(deck[i]);
             if (i % CARDS_PER_PLAYER == CARDS_PER_PLAYER - 1)
-                System.out.println();
+                System.out.println();//每一位玩家获取完牌
         }
     }
 
