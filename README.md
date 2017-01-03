@@ -101,5 +101,6 @@
 48. [StrictMode for Runtime Analysis on Android](https://github.com/RogerGold/AndroidNotes/blob/master/StrictMode.md)
 49. [Sharing Content between Android apps](https://github.com/RogerGold/AndroidNotes/blob/master/Sharing_Content_between_Android_apps.md)
 50. [Putting Your APKs on Diet(APK瘦身)](http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/)
-51. [纸牌游戏](https://github.com/RogerGold/AndroidNotes/blob/master/Deck.java)
+51. [纸牌游戏,洗牌发牌功能](https://github.com/RogerGold/AndroidNotes/blob/master/Deck.java)
 52. [android获取运行进程的名字](https://github.com/RogerGold/AndroidNotes/blob/master/getProcessName.java)
+53. [java日历](https://github.com/RogerGold/AndroidNotes/blob/master/Calendar.java)
