@@ -106,3 +106,4 @@
 53. [java日历](https://github.com/RogerGold/AndroidNotes/blob/master/Calendar.java)
 54. [TowersOfHanoi](https://github.com/RogerGold/AndroidNotes/blob/master/TowersOfHanoi.java)
 55. [16进制和10进制互换](https://github.com/RogerGold/AndroidNotes/blob/master/Hex2Decimal.java)
+56. [Battery Optimization for Android Apps](https://github.com/RogerGold/AndroidNotes/blob/master/Battery_Optimization_for_Android_Apps.md)
