@@ -113,3 +113,4 @@
 60. [5 Questions Every Unit Test Must Answer](https://github.com/RogerGold/AndroidNotes/blob/master/Unit_Test.md)
 61. [获取进程的名字](https://github.com/RogerGold/AndroidNotes/blob/master/getProcessName.java)
 62. [android颜色资源](https://github.com/RogerGold/AndroidNotes/blob/master/colors.xml)
+63. [android字符串使用技巧](https://luoxinjie.github.io/android/androidString/)
