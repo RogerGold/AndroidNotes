@@ -4,6 +4,7 @@
 每次连接字符串都会构建一个新的String对象， 既耗费时间，也浪费控件，使用StringBuilder可以避免这个问题。
 
 如果需要用许多小段的字符串构建一个字符串，那么可以这样：
+
 1. 构建一个空的自古次构造器。
 
        StringBuilder builder = new StringBuilder();
