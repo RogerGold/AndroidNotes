@@ -116,3 +116,4 @@
 63. [android字符串使用技巧](https://luoxinjie.github.io/android/androidString/)
 64. [台阶面试问题](https://github.com/RogerGold/AndroidNotes/blob/master/%E4%B8%8A%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98.md)
 65. [StringBuilder](https://github.com/RogerGold/AndroidNotes/blob/master/StringBuilder.md)
+66. [java笔记](https://github.com/RogerGold/AndroidNotes/blob/master/java_note.md)
