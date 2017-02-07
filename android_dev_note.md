@@ -135,7 +135,7 @@ Any time you reference @drawable/awesomeimage, the system selects the appropriat
 
     private int dip2px(Context context, float dipValue){
       final float scale = context.getResource().getDisplayMetrics().density;
-      return (int)(dipValue * scale = 0.5f);
+      return (int)(dipValue * scale + 0.5f);
     }
  
  
