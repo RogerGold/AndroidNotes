@@ -118,3 +118,4 @@
 65. [StringBuilder](https://github.com/RogerGold/AndroidNotes/blob/master/StringBuilder.md)
 66. [java笔记](https://github.com/RogerGold/AndroidNotes/blob/master/java_note.md)
 67. [设置android字体](http://stackoverflow.com/questions/12128331/how-to-change-fontfamily-of-textview-in-android)
+68. [failed to create jvm error code 4 android studio](https://stackoverflow.com/questions/33094132/failed-to-create-jvm-error-code-4-android-studio)
