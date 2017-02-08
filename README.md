@@ -120,3 +120,4 @@
 67. [设置android字体](http://stackoverflow.com/questions/12128331/how-to-change-fontfamily-of-textview-in-android)
 68. [failed to create jvm error code 4 android studio](https://stackoverflow.com/questions/33094132/failed-to-create-jvm-error-code-4-android-studio)
 69. [移动APP安全测试要点](http://blog.nsfocus.net/mobile-app-security-security-test/)
+70. [android日期格式](https://github.com/RogerGold/AndroidNotes/blob/master/android_date_form.md)
