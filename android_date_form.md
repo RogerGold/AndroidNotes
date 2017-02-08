@@ -1,4 +1,4 @@
-  # android日期显示格式
+# android日期显示格式
   
       1. 英文显示格式
       SimpleDateFormat format = new SimpleDateFormat("yyyy MMM dd");//注意有3个M
