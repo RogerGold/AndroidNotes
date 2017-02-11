@@ -122,3 +122,4 @@
 69. [移动APP安全测试要点](http://blog.nsfocus.net/mobile-app-security-security-test/)
 70. [android日期格式](https://github.com/RogerGold/AndroidNotes/blob/master/android_date_form.md)
 71. [android数据库操作](https://github.com/RogerGold/AndroidNotes/blob/master/android_sqlite.md)
+72. [java随机数](https://github.com/RogerGold/AndroidNotes/blob/master/java_random.md)
