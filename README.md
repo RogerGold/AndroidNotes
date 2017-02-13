@@ -123,3 +123,4 @@
 70. [android日期格式](https://github.com/RogerGold/AndroidNotes/blob/master/android_date_form.md)
 71. [android数据库操作](https://github.com/RogerGold/AndroidNotes/blob/master/android_sqlite.md)
 72. [java随机数](https://github.com/RogerGold/AndroidNotes/blob/master/java_random.md)
+73. [Android中测量Text的宽度和高度](http://ltlovezh.com/2016/04/24/Android%E4%B8%AD%E6%B5%8B%E9%87%8FText%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6/)
