@@ -171,3 +171,11 @@ dialog), you may be able to get away with this approach.
     editText.setError("不能为空", drawable);
 
 Drawable直接get出来是没有边界的，就不能显示出来，需要通过setBounds方法加上边界，才能正常显示!
+
+TextView也可以设置错题，不过它要获取焦点才能显示错误信息，而EditText不用获取因为自己能够抢到焦点，以下是实现TextView错误提示的代码
+
+    TextView text = (TextView) findViewById(R.id.text);
+     text.setError("***");
+     text.requestFocus();
+     
+如果不获取焦点直接setError的话还是可以显示出感叹号的，只是相当于drawableright的作用
