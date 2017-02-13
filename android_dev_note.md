@@ -165,3 +165,9 @@ show up in the overview screen (a.k.a., recent-tasks list). Also, since the acti
 such as the underlying home screen. But, if the activity can finish() itself quickly,
 and is interacting with the user in the meantime (e.g., displaying some system
 dialog), you may be able to get away with this approach.
+### editText.setError
+    Drawable drawable = getResources().getDrawable(R.drawable.iconfont_user);//获取图片资源
+    drawable.setBounds(0, 0, 72, 72);
+    editText.setError("不能为空", drawable);
+
+Drawable直接get出来是没有边界的，就不能显示出来，需要通过setBounds方法加上边界，才能正常显示!
