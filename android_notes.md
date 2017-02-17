@@ -72,6 +72,4 @@
 72. [java随机数](https://github.com/RogerGold/AndroidNotes/blob/master/java_random.md)
 73. [Android中测量Text的宽度和高度](http://ltlovezh.com/2016/04/24/Android%E4%B8%AD%E6%B5%8B%E9%87%8FText%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6/)
 74. [android安全](https://github.com/RogerGold/AndroidNotes/blob/master/android_security.md)
-75. [编译报错：Java finished with non-zero exit value 2 - Android Gradle
-
-](http://stackoverflow.com/questions/29756188/java-finished-with-non-zero-exit-value-2-android-gradle)
+75. [编译报错：Java finished with non-zero exit value 2 - Android Gradle](http://stackoverflow.com/questions/29756188/java-finished-with-non-zero-exit-value-2-android-gradle)
