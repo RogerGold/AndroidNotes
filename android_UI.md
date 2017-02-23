@@ -5,3 +5,4 @@
 3. [关于Activity切换动画（overridePendingTransition）的黑色背景问题1](http://www.blogs8.cn/posts/EmqR61b)
 4. [关于Activity切换动画（overridePendingTransition）的黑色背景问题2](http://stackoverflow.com/questions/6468349/how-to-remove-black-background-between-start-new-activity-during-slide-left-anim)
 5. [finish-an-activity-from-another-activity](http://stackoverflow.com/questions/10379134/finish-an-activity-from-another-activity)
+6. [Android 颜色透明度换算](http://www.snowdream.tech/2016/03/11/android-color-argb-alpha-convert/)
