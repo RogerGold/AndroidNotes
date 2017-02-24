@@ -9,3 +9,4 @@
 7. [Android 自定义水平进度条的圆角进度](http://blog.csdn.net/lv_fq/article/details/51762209)
 8. [Activity启动模式图文详解：standard, singleTop, singleTask 以及 singleInstance](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0520/2897.html)
 9. [Speed up your Android UI](http://www.curious-creature.com/2009/03/04/speed-up-your-android-ui/)
+10. [Android中的UI过度绘制](http://www.jianshu.com/p/9e095bacf44a)
