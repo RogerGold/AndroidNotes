@@ -11,3 +11,4 @@
 9. [Speed up your Android UI](http://www.curious-creature.com/2009/03/04/speed-up-your-android-ui/)
 10. [Android中的UI过度绘制](http://www.jianshu.com/p/9e095bacf44a)
 11. [Android changing Floating Action Button color](http://stackoverflow.com/questions/30969455/android-changing-floating-action-button-color)
+12. [软键盘影响布局问题](http://www.jianshu.com/p/1fb4f6d61ca3)
