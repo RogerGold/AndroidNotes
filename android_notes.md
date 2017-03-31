@@ -75,3 +75,4 @@
 75. [编译报错：Java finished with non-zero exit value 2 - Android Gradle](http://stackoverflow.com/questions/29756188/java-finished-with-non-zero-exit-value-2-android-gradle)
 76. [获各应用包下的指定资源ID](http://stackoverflow.com/questions/15488238/using-android-getidentifier)
 77. [gradle errortimeout](http://stackoverflow.com/questions/31784132/errortimeout-waiting-to-lock-buildscript-class-cache-for-build-file-when-change)
+78. [how to extract a substring using regex](http://stackoverflow.com/questions/4662215/how-to-extract-a-substring-using-regex)
