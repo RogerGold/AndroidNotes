@@ -13,3 +13,4 @@
 11. [Android changing Floating Action Button color](http://stackoverflow.com/questions/30969455/android-changing-floating-action-button-color)
 12. [软键盘影响布局问题](http://www.jianshu.com/p/1fb4f6d61ca3)
 13. [How to add dividers and spaces between items in RecyclerView?](http://stackoverflow.com/questions/24618829/how-to-add-dividers-and-spaces-between-items-in-recyclerview)
+14. [RecyclerView set onItemClickListener()](http://stackoverflow.com/questions/24885223/why-doesnt-recyclerview-have-onitemclicklistener-and-how-recyclerview-is-dif)
