@@ -76,3 +76,4 @@
 76. [获各应用包下的指定资源ID](http://stackoverflow.com/questions/15488238/using-android-getidentifier)
 77. [gradle errortimeout](http://stackoverflow.com/questions/31784132/errortimeout-waiting-to-lock-buildscript-class-cache-for-build-file-when-change)
 78. [how to extract a substring using regex](http://stackoverflow.com/questions/4662215/how-to-extract-a-substring-using-regex)
+79. [android launch mode](https://medium.com/@iammert/android-launchmode-visualized-8843fc833dbe)
