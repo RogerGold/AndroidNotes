@@ -79,3 +79,4 @@
 79. [android launch mode](https://medium.com/@iammert/android-launchmode-visualized-8843fc833dbe)
 80. [has value '1.8', but '1.7' is required](http://stackoverflow.com/questions/29697543/registry-key-error-java-version-has-value-1-8-but-1-7-is-required)
 81. [android context](https://possiblemobile.com/2013/06/context/)
+82. [android runtime](https://android.jlelse.eu/closer-look-at-android-runtime-dvm-vs-art-1dc5240c3924)
