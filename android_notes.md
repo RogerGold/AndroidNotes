@@ -81,3 +81,4 @@
 81. [android context](https://possiblemobile.com/2013/06/context/)
 82. [android runtime](https://android.jlelse.eu/closer-look-at-android-runtime-dvm-vs-art-1dc5240c3924)
 83. [JDBCConnectionPooling](http://www.javaranch.com/journal/200601/JDBCConnectionPooling.html)
+84. [android studio Unsupported major.minor version 52.0 error](http://blog.csdn.net/yxhuang2008/article/details/51099276)
