@@ -84,3 +84,4 @@
 84. [android studio Unsupported major.minor version 52.0 error](http://blog.csdn.net/yxhuang2008/article/details/51099276)
 85. [android.intent.action.MEDIA_MOUNTED permisson](http://stackoverflow.com/questions/24072489/java-lang-securityexception-permission-denial-not-allowed-to-send-broadcast-an)
 86. [sqlite data to excel](http://stackoverflow.com/questions/21448001/how-to-implement-export-sqlite-to-excel-csv-file-in-android)
+86. [sqlite data to excel2](http://stackoverflow.com/questions/14049323/android-program-to-convert-the-sqlite-database-to-excel)
