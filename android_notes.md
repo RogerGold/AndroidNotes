@@ -85,3 +85,4 @@
 85. [android.intent.action.MEDIA_MOUNTED permisson](http://stackoverflow.com/questions/24072489/java-lang-securityexception-permission-denial-not-allowed-to-send-broadcast-an)
 86. [sqlite data to excel](http://stackoverflow.com/questions/21448001/how-to-implement-export-sqlite-to-excel-csv-file-in-android)
 86. [sqlite data to excel2](http://stackoverflow.com/questions/14049323/android-program-to-convert-the-sqlite-database-to-excel)
+87. [excel to sqlite](http://www.mysamplecode.com/2011/10/android-read-write-excel-file-using.html)
