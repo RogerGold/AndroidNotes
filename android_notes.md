@@ -86,3 +86,4 @@
 86. [sqlite data to excel](http://stackoverflow.com/questions/21448001/how-to-implement-export-sqlite-to-excel-csv-file-in-android)
 86. [sqlite data to excel2](http://stackoverflow.com/questions/14049323/android-program-to-convert-the-sqlite-database-to-excel)
 87. [excel to sqlite](http://www.mysamplecode.com/2011/10/android-read-write-excel-file-using.html)
+88. [android自定义View](https://hackernoon.com/android-draw-a-custom-view-ef79fe2ff54b)
