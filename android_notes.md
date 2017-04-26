@@ -87,3 +87,4 @@
 86. [sqlite data to excel2](http://stackoverflow.com/questions/14049323/android-program-to-convert-the-sqlite-database-to-excel)
 87. [excel to sqlite](http://www.mysamplecode.com/2011/10/android-read-write-excel-file-using.html)
 88. [android自定义View](https://hackernoon.com/android-draw-a-custom-view-ef79fe2ff54b)
+89. [recyclerview indexoutofboundsexception](http://stackoverflow.com/questions/31759171/recyclerview-and-java-lang-indexoutofboundsexception-inconsistency-detected-in)
