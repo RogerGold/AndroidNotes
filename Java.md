@@ -28,3 +28,5 @@
 ### [Spring courses](https://javabrains.io/courses/spring_core)
 
 ### [Spring topics](https://javabrains.io/topics/spring)
+
+### [spring web](https://spring.io/)
