@@ -14,3 +14,7 @@
 ### [oracle java](http://docs.oracle.com/javase/tutorial/reallybigindex.html)
 
 ### [Java Great Reads](https://www.codeproject.com/KB/java/)
+
+### [Awesome Java](https://github.com/akullpp/awesome-java)
+
+### [Awesome Java Chinese](https://github.com/jobbole/awesome-java-cn)
