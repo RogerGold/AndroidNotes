@@ -10,6 +10,8 @@
    android网络相关的资料
 4. [android UI](https://github.com/RogerGold/AndroidNotes/blob/master/android_UI.md) android UI相关资料
 
+5. [Java resource](https://github.com/RogerGold/AndroidNotes/blob/master/Java.md)
+
 [codepath:android教程](https://guides.codepath.com/android)
 
 [java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
