@@ -15,6 +15,7 @@
 ### [Awesome Java Chinese](https://github.com/jobbole/awesome-java-cn)
 ### [apache source code](http://commons.apache.org/proper/commons-lang/apidocs/src-html/org/apache/commons/lang3/)
 ### [100 High-Quality Java Developers’ Blogs](http://www.programcreek.com/2012/11/top-100-java-developers-blogs/)
+### [world of Geeks](http://www.geeksforgeeks.org/java/)
 
 ## Java Spring
 
@@ -63,3 +64,21 @@
 ### [Understanding Java threads](http://www.javaworld.com/article/2074217/java-concurrency/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html)
 ### [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
 ### [Java concurrency (multi-threading) - Tutorial](http://www.vogella.com/tutorials/JavaConcurrency/article.html)
+
+## Java online
+### [w3resource](http://www.w3resource.com/index.php)
+### [Collected Java Practices](http://www.javapractices.com/home/HomeAction.do)
+### [oracle tutorial](http://docs.oracle.com/javase/tutorial/)
+### [Problems Archives](https://projecteuler.net/archives)
+### [Data Structures and Algorithms in Java](https://sites.google.com/site/indy256/algo)
+
+## Java web
+
+### [Java Web Start](http://docs.oracle.com/javase/tutorial/deployment/webstart/)
+### [The Java EE 6 Tutorial](http://docs.oracle.com/javaee/6/tutorial/doc/gexaf.html)
+### [Introduction to Java Web development](http://www.vogella.com/tutorials/JavaWebTerminology/article.html)
+### [Java EE & Java Web Learning Trail](https://netbeans.org/kb/trails/java-ee.html)
+### [Trail: Custom Networking](https://docs.oracle.com/javase/tutorial/networking/index.html)
+### [Java Networking](https://docs.oracle.com/javase/8/docs/technotes/guides/net/)
+### [Java Networking tutorial](https://www.tutorialspoint.com/java/java_networking.htm)
+### [Blog:Java Networking](http://tutorials.jenkov.com/java-networking/index.html)
