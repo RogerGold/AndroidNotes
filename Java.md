@@ -23,7 +23,9 @@
 ### [Spring courses](https://javabrains.io/courses/spring_core)
 ### [Spring topics](https://javabrains.io/topics/spring)
 ### [spring web](https://spring.io/)
-
+### [spring framework reference](https://docs.spring.io/spring/docs/current/spring-framework-reference/html/)
+### [JBoss AOP - User Guide](https://docs.jboss.org/aop/1.0/aspect-framework/userguide/en/html/)
+### [aspect-oriented programming(AOP)](http://www.javaworld.com/article/2073918/core-java/i-want-my-aop---part-1.html)
 ## RESTful 
 
 ### [java EE](http://docs.oracle.com/javaee/6/tutorial/doc/docinfo.html)
