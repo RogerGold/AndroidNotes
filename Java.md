@@ -17,6 +17,7 @@
 ### [100 High-Quality Java Developers’ Blogs](http://www.programcreek.com/2012/11/top-100-java-developers-blogs/)
 ### [world of Geeks](http://www.geeksforgeeks.org/java/)
 ### [The Java Tutorial](http://www.math.uni-hamburg.de/doc/java/tutorial/index.html)
+### [A FRIENDLY PLACE TO LEARN JAVA PROGRAMMING](https://javaranch.com/)
 
 ## Java Spring
 
@@ -109,3 +110,6 @@
 ### [Connect Java to a MySQL database](http://stackoverflow.com/questions/2839321/connect-java-to-a-mysql-database)
 ### [Java Embedded Databases Comparison](http://stackoverflow.com/questions/462923/java-embedded-databases-comparison)
 ### [Open Source Database Engines in Java](https://java-source.net/open-source/database-engines)
+
+## Java Code style
+### [Google Java Style Guide](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
