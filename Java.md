@@ -113,3 +113,7 @@
 
 ## Java Code style
 ### [Google Java Style Guide](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
+
+## Java Data Structures and Algorithms
+
+### [500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
