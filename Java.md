@@ -16,6 +16,7 @@
 ### [apache source code](http://commons.apache.org/proper/commons-lang/apidocs/src-html/org/apache/commons/lang3/)
 ### [100 High-Quality Java Developers’ Blogs](http://www.programcreek.com/2012/11/top-100-java-developers-blogs/)
 ### [world of Geeks](http://www.geeksforgeeks.org/java/)
+### [The Java Tutorial](http://www.math.uni-hamburg.de/doc/java/tutorial/index.html)
 
 ## Java Spring
 
@@ -64,6 +65,11 @@
 ### [Understanding Java threads](http://www.javaworld.com/article/2074217/java-concurrency/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html)
 ### [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
 ### [Java concurrency (multi-threading) - Tutorial](http://www.vogella.com/tutorials/JavaConcurrency/article.html)
+### [oracle: Thread Pools](https://docs.oracle.com/javase/tutorial/essential/concurrency/pools.html)
+### [Java Thread Pool](https://www.javatpoint.com/java-thread-pool)
+### [Thread Pools](http://www.math.uni-hamburg.de/doc/java/tutorial/essential/threads/group.html)
+### [Thread pools and work queues](https://www.ibm.com/developerworks/library/j-jtp0730/)
+### [Writing your own Threadpool from scratch in Java](https://caffinc.github.io/2016/03/simple-threadpool/)
 
 ## Java online
 ### [w3resource](http://www.w3resource.com/index.php)
@@ -82,3 +88,15 @@
 ### [Java Networking](https://docs.oracle.com/javase/8/docs/technotes/guides/net/)
 ### [Java Networking tutorial](https://www.tutorialspoint.com/java/java_networking.htm)
 ### [Blog:Java Networking](http://tutorials.jenkov.com/java-networking/index.html)
+
+## Java Database
+
+### [JDBC Connection Pooling Best Practices](http://www.javaranch.com/journal/200601/JDBCConnectionPooling.html)
+### [c3p0 - JDBC3 Connection and Statement Pooling](http://www.mchange.com/projects/c3p0/index.html#using_combopooleddatasource)
+### [JBoss AS 4.0.3](http://docs.jboss.org/jbossas/jboss4guide/r4/html/)
+### [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/jdbc/basics/sqldatasources.html)
+### [JDBC Connection Pooling](https://www.progress.com/tutorials/jdbc/jdbc-jdbc-connection-pooling)
+### [Connection Pool](https://blog.jooq.org/tag/connection-pool/)
+### [Java JDBC: A SQL SELECT query example](http://alvinalexander.com/java/edu/pj/jdbc/jdbc0003)
+### [JDBC - Sample, Example Code](https://www.tutorialspoint.com/jdbc/jdbc-sample-code.htm)
+### [SQL Tutorial](https://www.javatpoint.com/sql-tutorial)
