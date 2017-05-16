@@ -13,6 +13,8 @@
 ### [Java Great Reads](https://www.codeproject.com/KB/java/)
 ### [Awesome Java](https://github.com/akullpp/awesome-java)
 ### [Awesome Java Chinese](https://github.com/jobbole/awesome-java-cn)
+### [apache source code](http://commons.apache.org/proper/commons-lang/apidocs/src-html/org/apache/commons/lang3/)
+### [100 High-Quality Java Developers’ Blogs](http://www.programcreek.com/2012/11/top-100-java-developers-blogs/)
 
 ## Java Spring
 
@@ -35,3 +37,21 @@
 ### [REST CookBook](http://restcookbook.com/)
 ### [What does RESTful really mean](https://carlosmchica.github.io/what-does-RESTful-really-mean/)
 ### [Flask-RESTful API](http://flask-restful.readthedocs.io/en/0.3.5/quickstart.html)
+
+## Java Optimization
+
+### [Make Java fast: Optimize!](http://www.javaworld.com/article/2077647/build-ci-sdlc/make-java-fast--optimize-.html)
+### [Java Performance Optimization](https://dzone.com/refcardz/java-performance-optimization)
+### [Java performance tuning tips](http://www.javaperformancetuning.com/tips/rawtips.shtml)
+### [Building Faster Java](http://www.oracle.com/technetwork/testcontent/o55opt-084977.html)
+### [Java Performance Tuning Guide](http://java-performance.info/)
+### [JOptimizer ](http://www.joptimizer.com/)
+### [Optimizing polymorphic code in Java](http://lemire.me/blog/2014/12/17/optimizing-polymorphic-code-in-java/)
+
+## JVM
+
+### [Understanding JVM Internals](http://www.cubrid.org/blog/dev-platform/understanding-jvm-internals/)
+### [jvm](https://www.infoq.com/jvm/)
+### [JVMInternals](http://blog.jamesdbloom.com/JVMInternals.html)
+### [JVM](http://www.artima.com/insidejvm/ed2/jvm2.html)
+### [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html)
