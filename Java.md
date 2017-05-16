@@ -57,3 +57,9 @@
 ### [JVMInternals](http://blog.jamesdbloom.com/JVMInternals.html)
 ### [JVM](http://www.artima.com/insidejvm/ed2/jvm2.html)
 ### [Java Virtual Machine Specification](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-2.html)
+
+## Java Thread
+
+### [Understanding Java threads](http://www.javaworld.com/article/2074217/java-concurrency/java-101--understanding-java-threads--part-1--introducing-threads-and-runnables.html)
+### [Java - Multithreading](https://www.tutorialspoint.com/java/java_multithreading.htm)
+### [Java concurrency (multi-threading) - Tutorial](http://www.vogella.com/tutorials/JavaConcurrency/article.html)
