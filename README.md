@@ -12,6 +12,8 @@
 
 5. [Java resource](https://github.com/RogerGold/AndroidNotes/blob/master/Java.md)
 
+6. [计算机操作系统相关的资料](https://pan.baidu.com/share/home?uk=1982446902#category/type=0)
+
 [codepath:android教程](https://guides.codepath.com/android)
 
 [java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
