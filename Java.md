@@ -18,6 +18,7 @@
 ### [world of Geeks](http://www.geeksforgeeks.org/java/)
 ### [The Java Tutorial](http://www.math.uni-hamburg.de/doc/java/tutorial/index.html)
 ### [A FRIENDLY PLACE TO LEARN JAVA PROGRAMMING](https://javaranch.com/)
+### [All about java](http://www.java2s.com/Code/Java/2D-Graphics-GUI/ImageFilter.htm)
 
 ## Java Spring
 
@@ -129,3 +130,9 @@
 ### [opencv-java-tutorials](https://media.readthedocs.org/pdf/opencv-java-tutorials/stable/opencv-java-tutorials.pdf)
 ### [Handling Images in a Java GUI Application](https://netbeans.org/kb/73/java/gui-image-display.html)
 ### [Java Advanced Imaging API](http://www.oracle.com/technetwork/java/jaifaq-138288.html)
+### [Working with Images](http://web.mit.edu/1.124/LectureNotes/images.html)
+### [Java BufferedImage Class](http://www.tutorialspoint.com/java_dip/java_buffered_image.htm)
+### [Java Game Programming](http://www.ntu.edu.sg/home/ehchua/programming/java/J8b_Game_2DGraphics.html)
+### [Display images using JEditorPane](http://www.javaworld.com/article/2077472/core-java/java-tip-109--display-images-using-jeditorpane.html)
+### [opencv](http://docs.opencv.org/3.2.0/)
+### [Java Image Filters](http://www.jhlabs.com/ip/filters/index.html)
