@@ -42,6 +42,7 @@
 ### [REST CookBook](http://restcookbook.com/)
 ### [What does RESTful really mean](https://carlosmchica.github.io/what-does-RESTful-really-mean/)
 ### [Flask-RESTful API](http://flask-restful.readthedocs.io/en/0.3.5/quickstart.html)
+### [REST这个词，是Roy Thomas Fielding在他2000年的博士论文中提出的](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)
 
 ## Java Optimization
 
