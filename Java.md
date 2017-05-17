@@ -119,3 +119,13 @@
 ## Java Data Structures and Algorithms
 
 ### [500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
+
+## java 图像处理
+
+### [Java DIP - OpenCV GrayScale Conversion](https://www.tutorialspoint.com/java_dip/grayscale_conversion_opencv.htm)
+### [Introduction to Java Development](http://docs.opencv.org/2.4/doc/tutorials/introduction/desktop_java/java_dev_intro.html)
+### [OpenCV Java Tutorials documentation](http://opencv-java-tutorials.readthedocs.io/en/latest/)
+### [Lesson: Working with Images](https://docs.oracle.com/javase/tutorial/2d/images/)
+### [opencv-java-tutorials](https://media.readthedocs.org/pdf/opencv-java-tutorials/stable/opencv-java-tutorials.pdf)
+### [Handling Images in a Java GUI Application](https://netbeans.org/kb/73/java/gui-image-display.html)
+### [Java Advanced Imaging API](http://www.oracle.com/technetwork/java/jaifaq-138288.html)
