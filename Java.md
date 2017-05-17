@@ -142,3 +142,8 @@
 ### [Images and Pixels](https://processing.org/tutorials/pixels/)
 ### [小波降噪](https://www5.cs.fau.de/research/software/idaa/)
 ### [小波降噪java实现](https://www.codeproject.com/articles/825687/discrete-wavelet-transforms-a-java-implementation)
+### [Fundamentals of Image Processing - behind the scenes](https://www.codeproject.com/Articles/781213/Fundamentals-of-Image-Processing-behind-the-scenes)
+### [Universal Framework for Science and Engineering](https://www.codeproject.com/Articles/17295/Universal-Framework-for-Science-and-Engineering)
+### [Universal Framework for Science and Engineering homepage](http://www.mathframe.com/)
+### [Fourier Transform in Digital Signal Processing](https://www.codeproject.com/Articles/1077529/Fourier-Transform-in-Digital-Signal-Processing)
+### [Universal Framework Articles by Petr Ivankov](https://www.codeproject.com/Articles/Petr-Ivankov#Article)
