@@ -52,6 +52,7 @@
 ### [Java Performance Tuning Guide](http://java-performance.info/)
 ### [JOptimizer ](http://www.joptimizer.com/)
 ### [Optimizing polymorphic code in Java](http://lemire.me/blog/2014/12/17/optimizing-polymorphic-code-in-java/)
+### [Java Performance Tuning](http://www.javaperformancetuning.com/)
 
 ## JVM
 
