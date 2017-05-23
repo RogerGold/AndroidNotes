@@ -123,6 +123,7 @@
 
 ## Java Data Structures and Algorithms
 
+### [Java Algorithms and Clients](http://algs4.cs.princeton.edu/code/)
 ### [500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
 
 ## java 图像处理
