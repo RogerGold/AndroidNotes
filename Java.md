@@ -2,7 +2,7 @@
 # These resources about java
 
 ## Java programming
-
+### [java programming notes](http://www3.ntu.edu.sg/home/ehchua/programming/index.html)
 ### [javaworld](http://www.javaworld.com/)
 ### [java basic](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
 ### [all about java](http://www.java2s.com/)
@@ -155,3 +155,4 @@
 ### [java-shapes-convert-to-bufferedimage](https://stackoverflow.com/questions/15492864/java-shapes-convert-to-bufferedimage)
 ### [Lesson: Working with Images](https://docs.oracle.com/javase/tutorial/2d/images/index.html)
 ### [Java Game Programming 2D Graphics, Java2D and Images](http://www3.ntu.edu.sg/home/ehchua/programming/java/j8b_game_2dgraphics.html)
+### [AndroidDrawables](http://www.vogella.com/tutorials/AndroidDrawables/article.html)
