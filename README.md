@@ -14,6 +14,7 @@
 
 6. [计算机操作系统相关的资料](https://pan.baidu.com/share/home?uk=1982446902#category/type=0)
 
+7. [microsoft research](https://www.microsoft.com/en-us/research/)
 [codepath:android教程](https://guides.codepath.com/android)
 
 [java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
