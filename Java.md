@@ -156,3 +156,8 @@
 ### [Lesson: Working with Images](https://docs.oracle.com/javase/tutorial/2d/images/index.html)
 ### [Java Game Programming 2D Graphics, Java2D and Images](http://www3.ntu.edu.sg/home/ehchua/programming/java/j8b_game_2dgraphics.html)
 ### [AndroidDrawables](http://www.vogella.com/tutorials/AndroidDrawables/article.html)
+### [Finding a picture in a picture with java?](https://stackoverflow.com/questions/12598818/finding-a-picture-in-a-picture-with-java)
+### [CognitiveJ – Image Analysis for Java01](https://github.com/CognitiveJ/cognitivej)
+### [CognitiveJ – Image Analysis for Java02](https://iankelly.io/2016/05/13/cognitivej/)
+### [Pure Java cross-platform image processing framework](http://marvinproject.sourceforge.net/en/index.html)
+### [Java Media APIs](http://www.oracle.com/technetwork/java/javase/tech/media-141984.html)
