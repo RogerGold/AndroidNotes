@@ -14,3 +14,6 @@
 
  A powerful image downloading and caching library for Android
  ![demo](https://github.com/square/picasso/blob/master/website/static/sample.png)
+
+
+### [GitHub 优秀的 Android 开源项目](http://www.cnblogs.com/hawkon/p/3593709.html)
