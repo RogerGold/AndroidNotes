@@ -18,9 +18,8 @@
 
 8. [Math](https://github.com/RogerGold/AndroidNotes/blob/master/math.md)
 
-9. [android resource]()
+9. [android resource](https://github.com/RogerGold/AndroidNotes/blob/master/android_resource.md)
 
-[codepath:android教程](https://guides.codepath.com/android)
 
 [java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
 
