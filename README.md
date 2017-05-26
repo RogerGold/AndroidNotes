@@ -20,9 +20,6 @@
 
 9. [android resource](https://github.com/RogerGold/AndroidNotes/blob/master/android_resource.md)
 
+10. [NoSQL]()
 
-[java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
 
-[how-to-delete-rows-in-sqlite-with-multiple-where-args](http://stackoverflow.com/questions/14357964/how-to-delete-rows-in-sqlite-with-multiple-where-args)
-
-[How To Add Library Project In Android Studio • DevDeeds](http://devdeeds.com/add-library-projects-maually-android-studio/)
