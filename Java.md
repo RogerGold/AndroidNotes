@@ -19,6 +19,7 @@
 ### [The Java Tutorial](http://www.math.uni-hamburg.de/doc/java/tutorial/index.html)
 ### [A FRIENDLY PLACE TO LEARN JAVA PROGRAMMING](https://javaranch.com/)
 ### [All about java](http://www.java2s.com/Code/Java/2D-Graphics-GUI/ImageFilter.htm)
+### [oracle](http://www.oracle.com/technetwork/java/javase/overview/index.html)
 
 ## Java Spring
 
