@@ -46,3 +46,52 @@ method. When the base class calls this method, Java calls the method defined by 
 Many developers forget that a class that defines an abstract method can call that method as well. 
 Abstract classes are an excellent way to create planned inheritance hierarchies. 
 They're also a good choice for nonleaf classes in class hierarchies.
+
+### Understanding Real use of instanceof in java
+    interface Printable{}  
+    class A implements Printable{  
+    public void a(){System.out.println("a method");}  
+    }  
+    class B implements Printable{  
+    public void b(){System.out.println("b method");}  
+    }  
+
+    class Call{  
+    void invoke(Printable p){//upcasting  
+    if(p instanceof A){  
+    A a=(A)p;//Downcasting   
+    a.a();  
+    }  
+    if(p instanceof B){  
+    B b=(B)p;//Downcasting   
+    b.b();  
+    }  
+
+    }  
+    }//end of Call class  
+
+    class Test4{  
+    public static void main(String args[]){  
+    Printable p=new B();  
+    Call c=new Call();  
+    c.invoke(p);  
+    }  
+    }  
+### Understanding the real scenario of abstract class
+    abstract class Shape{  
+    abstract void draw();  
+    }  
+    //In real scenario, implementation is provided by others i.e. unknown by end user  
+    class Rectangle extends Shape{  
+    void draw(){System.out.println("drawing rectangle");}  
+    }  
+    class Circle1 extends Shape{  
+    void draw(){System.out.println("drawing circle");}  
+    }  
+    //In real scenario, method is called by programmer or user  
+    class TestAbstraction1{  
+    public static void main(String args[]){  
+    Shape s=new Circle1();//In real scenario, object is provided through method e.g. getShape() method  
+    s.draw();  
+    }  
+    }  
