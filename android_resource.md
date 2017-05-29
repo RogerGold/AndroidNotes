@@ -13,3 +13,5 @@
 [How To Add Library Project In Android Studio • DevDeeds](http://devdeeds.com/add-library-projects-maually-android-studio/)
 
 [Java string to date conversion](https://stackoverflow.com/questions/4216745/java-string-to-date-conversion)
+
+[AbstractOrInterfaces](https://github.com/RogerGold/AndroidNotes/edit/master/AbstractOrInterfaces.md)
