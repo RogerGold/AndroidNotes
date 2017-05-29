@@ -15,3 +15,7 @@
 [Java string to date conversion](https://stackoverflow.com/questions/4216745/java-string-to-date-conversion)
 
 [AbstractOrInterfaces](https://github.com/RogerGold/AndroidNotes/edit/master/AbstractOrInterfaces.md)
+
+[WSDL01](https://msdn.microsoft.com/en-us/library/ms996486.aspx)
+
+[WSDL02](https://www.w3.org/TR/wsdl)
