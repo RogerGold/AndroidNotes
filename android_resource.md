@@ -19,3 +19,5 @@
 [WSDL01](https://msdn.microsoft.com/en-us/library/ms996486.aspx)
 
 [WSDL02](https://www.w3.org/TR/wsdl)
+
+[Android-Resources-Beginner-s-Guide-to-Organizing-A](https://www.codeproject.com/Articles/810940/Android-Resources-Beginner-s-Guide-to-Organizing-A)
