@@ -25,3 +25,5 @@
 [Android UI Layout and Controls](https://www.codeproject.com/Articles/803688/Lets-create-the-Screen-Android-UI-Layout-and-Contr)
 
 [Android Data Storage](https://www.codeproject.com/Articles/814287/Android-Data-Storage)
+
+[java-reflection-tutorial](http://www.programcreek.com/2013/09/java-reflection-tutorial/)
