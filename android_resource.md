@@ -21,3 +21,7 @@
 [WSDL02](https://www.w3.org/TR/wsdl)
 
 [Android-Resources-Beginner-s-Guide-to-Organizing-A](https://www.codeproject.com/Articles/810940/Android-Resources-Beginner-s-Guide-to-Organizing-A)
+
+[Android UI Layout and Controls](https://www.codeproject.com/Articles/803688/Lets-create-the-Screen-Android-UI-Layout-and-Contr)
+
+[Android Data Storage](https://www.codeproject.com/Articles/814287/Android-Data-Storage)
