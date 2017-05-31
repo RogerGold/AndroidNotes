@@ -22,4 +22,4 @@
 
 10. [NoSQL](https://github.com/RogerGold/AndroidNotes/blob/master/noSQL.md)
 
-
+11. [Computer Vision](https://github.com/RogerGold/AndroidNotes/blob/master/computer_vision.md)
