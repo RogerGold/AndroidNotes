@@ -1,5 +1,11 @@
 # Android Resource
 
+[Android 学习资料收集](https://github.com/Freelander/Android_Data)
+
+[最全面的 Material Design 学习资料](https://github.com/Luosunce/material-design-data)
+
+[算法](https://github.com/julycoding/The-Art-Of-Programming-By-July)
+
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
 
 [Android and Architecture](https://android-developers.googleblog.com/2017/05/android-and-architecture.html)
