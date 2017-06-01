@@ -27,3 +27,5 @@
 [Android Data Storage](https://www.codeproject.com/Articles/814287/Android-Data-Storage)
 
 [java-reflection-tutorial](http://www.programcreek.com/2013/09/java-reflection-tutorial/)
+
+[Motion Detection in Android - Howto](https://www.codeproject.com/Articles/791145/Motion-Detection-in-Android-Howto)
