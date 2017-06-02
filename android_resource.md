@@ -35,3 +35,5 @@
 [java-reflection-tutorial](http://www.programcreek.com/2013/09/java-reflection-tutorial/)
 
 [Motion Detection in Android - Howto](https://www.codeproject.com/Articles/791145/Motion-Detection-in-Android-Howto)
+
+[Single Page Application (SPA) for Enterprise App (Angular2 & WebApi)](https://www.codeproject.com/Articles/1139558/Single-Page-Application-SPA-for-Enterprise-App-Ang)
