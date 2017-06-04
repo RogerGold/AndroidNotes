@@ -15,3 +15,5 @@
 [数值计算方法](http://www.icourses.cn/jpk/viewCharacterDetail.action?sectionId=17496&courseId=3756)
 
 [The Scientist and Engineer's Guide to Digital Signal Processing](http://www.dspguide.com/pdfbook.htm)
+
+[How Do I Learn DSP?](http://www.redcedar.com/learndsp.htm)
