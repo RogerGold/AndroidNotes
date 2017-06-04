@@ -8,6 +8,8 @@
 
 [安卓开发终极指南: 50多个初高级开发资源](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2017/0321/7700.html)
 
+[腾讯云课程： android](https://ke.qq.com/course/list/动脑学院)
+
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
 
 [Android and Architecture](https://android-developers.googleblog.com/2017/05/android-and-architecture.html)
