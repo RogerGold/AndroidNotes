@@ -6,6 +6,8 @@
 
 [算法](https://github.com/julycoding/The-Art-Of-Programming-By-July)
 
+[安卓开发终极指南: 50多个初高级开发资源](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2017/0321/7700.html)
+
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
 
 [Android and Architecture](https://android-developers.googleblog.com/2017/05/android-and-architecture.html)
