@@ -27,3 +27,7 @@
 [ImageJ是一个基于java的公共的图像处理软件](https://imagej.net/Welcome)
 
 [ImageJ维基百科](https://zh.wikipedia.org/wiki/ImageJ)
+
+[Java Digital Image Processing Tutorial](http://www.tutorialspoint.com/java_dip/)
+
+[open source image processing lib in java](https://stackoverflow.com/questions/2407113/open-source-image-processing-lib-in-java)
