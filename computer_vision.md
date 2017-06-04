@@ -17,3 +17,11 @@
 [The Scientist and Engineer's Guide to Digital Signal Processing](http://www.dspguide.com/pdfbook.htm)
 
 [How Do I Learn DSP?](http://www.redcedar.com/learndsp.htm)
+
+[C Code Wavelet Transform and Explanation](https://stackoverflow.com/questions/22947469/c-code-wavelet-transform-and-explanation)
+
+[a good C/C++ wavelet library for signal processing](https://stackoverflow.com/questions/9606458/looking-for-a-good-c-c-wavelet-library-for-signal-processing)
+
+[Images and Pixels](https://processing.org/tutorials/pixels/)
+
+[ImageJ是一个基于java的公共的图像处理软件](https://imagej.net/Welcome)
