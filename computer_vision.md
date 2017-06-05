@@ -63,3 +63,9 @@
 [Some Cool Image Effects](https://www.codeproject.com/Articles/996192/Some-Cool-Image-Effects)
 
 [AndroidVision: Learn Image Processing on your mobile](https://www.codeproject.com/Articles/695991/AndroidVision-Learn-Image-Processing-on-your-mobil)
+
+[Real-time video image processing / frame grabber using a minimalistic approach](https://www.codeproject.com/Articles/12869/Real-time-video-image-processing-frame-grabber-usi)
+
+[Android Character Recognition](https://www.codeproject.com/Articles/840623/Android-Character-Recognition)
+
+[How to Establish a Different Picture of the Android Camera by Image Processing (Gray and Comic)?](https://www.codeproject.com/Tips/867282/How-to-Establish-a-Different-Picture-of-the-Androi)
