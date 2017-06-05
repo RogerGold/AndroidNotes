@@ -37,3 +37,17 @@
 [Fourier Transform in Digital Signal Processing](https://www.codeproject.com/Articles/1077529/Fourier-Transform-in-Digital-Signal-Processing)
 
 [Barcode Image Generation Library](https://www.codeproject.com/Articles/20823/Barcode-Image-Generation-Library)
+
+[Finding Similiar Images](https://www.codeproject.com/Articles/2936/Finding-Similiar-Images)
+
+[Fundamentals of Image Processing - behind the scenes](https://www.codeproject.com/Articles/781213/Fundamentals-of-Image-Processing-behind-the-scenes)
+
+[ColorMatrix Basics - Simple Image Color Adjustment](https://www.codeproject.com/Articles/3772/ColorMatrix-Basics-Simple-Image-Color-Adjustment)
+
+[Image Binarization Using 10 Program Languages](https://www.codeproject.com/Articles/1094534/Image-Binarization-Using-Program-Languages)
+
+[Implementing the Huffman adaptive algorithm to compress 256 colors depth graphics  images](https://www.codeproject.com/Articles/1021163/Implementing-the-Huffman-adaptive-algorithm-to-com)
+
+[Easy Way to Upload Images to the Web](https://www.codeproject.com/Articles/38833/Easy-Way-to-Upload-Images-to-the-Web)
+
+[Image Processing: Skin Detection, Some Filters and EXIF ](https://www.codeproject.com/Articles/38176/Image-Processing-Skin-Detection-Some-Filters-and-E)
