@@ -31,3 +31,9 @@
 [Java Digital Image Processing Tutorial](http://www.tutorialspoint.com/java_dip/)
 
 [open source image processing lib in java](https://stackoverflow.com/questions/2407113/open-source-image-processing-lib-in-java)
+
+[Neural Network for Recognition of Handwritten Digits](https://www.codeproject.com/Articles/16650/Neural-Network-for-Recognition-of-Handwritten-Digi)
+
+[Fourier Transform in Digital Signal Processing](https://www.codeproject.com/Articles/1077529/Fourier-Transform-in-Digital-Signal-Processing)
+
+[Barcode Image Generation Library](https://www.codeproject.com/Articles/20823/Barcode-Image-Generation-Library)
