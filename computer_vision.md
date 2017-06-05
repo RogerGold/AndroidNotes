@@ -51,3 +51,15 @@
 [Easy Way to Upload Images to the Web](https://www.codeproject.com/Articles/38833/Easy-Way-to-Upload-Images-to-the-Web)
 
 [Image Processing: Skin Detection, Some Filters and EXIF ](https://www.codeproject.com/Articles/38176/Image-Processing-Skin-Detection-Some-Filters-and-E)
+
+[Image Alignment Algorithms](https://www.codeproject.com/Articles/24809/Image-Alignment-Algorithms)
+
+[Image Filters](https://www.codeproject.com/Articles/42729/Image-Filters)
+
+[Advanced Image Control](https://www.codeproject.com/Articles/1036270/Advanced-Image-Control)
+
+[Human Emotion Detection from Image](https://www.codeproject.com/Articles/110805/Human-Emotion-Detection-from-Image)
+
+[Some Cool Image Effects](https://www.codeproject.com/Articles/996192/Some-Cool-Image-Effects)
+
+[AndroidVision: Learn Image Processing on your mobile](https://www.codeproject.com/Articles/695991/AndroidVision-Learn-Image-Processing-on-your-mobil)
