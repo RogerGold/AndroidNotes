@@ -12,6 +12,8 @@
 
 [google:Android Interfaces and Architecture](https://source.android.com/devices/)
 
+[Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/)
+
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
 
 [Android and Architecture](https://android-developers.googleblog.com/2017/05/android-and-architecture.html)
