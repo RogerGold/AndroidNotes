@@ -16,7 +16,13 @@
 
 [Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/index.html)
 
+[stackoverflow: android image processing tutorial](https://stackoverflow.com/questions/6078839/android-image-processing-tutorial)
+
 [The Scientist and Engineer's Guide to Digital Signal Processing](http://www.dspguide.com/pdfbook.htm)
+
+[opencv-in-android](https://sriraghu.com/2017/03/11/opencv-in-android-an-introduction-part-1/)
+
+[Reuse existing C code with the Android NDK](https://www.ibm.com/developerworks/opensource/tutorials/os-androidndk/)
 
 [How Do I Learn DSP?](http://www.redcedar.com/learndsp.htm)
 
