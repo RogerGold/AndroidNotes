@@ -25,3 +25,5 @@
 11. [Computer Vision](https://github.com/RogerGold/AndroidNotes/blob/master/computer_vision.md)
 
 12. [Design](https://github.com/RogerGold/AndroidNotes/blob/master/design.md)
+
+13. [NLP](https://github.com/RogerGold/AndroidNotes/blob/master/NLP.md)
