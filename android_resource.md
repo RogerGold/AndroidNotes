@@ -14,6 +14,10 @@
 
 [udacity:高级 Android 应用开发](https://cn.udacity.com/course/advanced-android-app-development--ud855)
 
+[codeproject: Android development tutorials](https://www.codeproject.com/Learn/Android/)
+
+[Android Tutorial](https://www.tutorialspoint.com/android/)
+
 [Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/)
 
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
