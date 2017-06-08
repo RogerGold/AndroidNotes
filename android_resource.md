@@ -16,6 +16,8 @@
 
 [google: androidstudio guide](https://developer.android.com/studio/intro/index.html)
 
+[github: android source code](https://github.com/android)
+
 [udacity:高级 Android 应用开发](https://cn.udacity.com/course/advanced-android-app-development--ud855)
 
 [codeproject: Android development tutorials](https://www.codeproject.com/Learn/Android/)
@@ -29,6 +31,10 @@
 [Android and Architecture](https://android-developers.googleblog.com/2017/05/android-and-architecture.html)
 
 [codepath:android教程](https://guides.codepath.com/android)
+
+[android NFC](https://code.tutsplus.com/tutorials/reading-nfc-tags-with-android--mobile-17278)
+
+[open source APP](https://github.com/pcqpcq/open-source-android-apps/blob/master/categories/education.md)
 
 [java 根据字段比较对象大小](http://stackoverflow.com/questions/1814095/sorting-an-arraylist-of-contacts-based-on-name)
 
