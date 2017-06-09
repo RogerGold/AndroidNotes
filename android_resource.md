@@ -24,6 +24,8 @@
 
 [Android Tutorial](https://www.tutorialspoint.com/android/)
 
+[Android Animation Tutorial](https://www.raywenderlich.com/128105/introduction-android-animations)
+
 [Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/)
 
 [30 Resources for Android Developers](http://blog.udacity.com/2015/06/30-android-developer-resources.html)
