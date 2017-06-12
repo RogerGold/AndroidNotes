@@ -65,3 +65,5 @@
 [Motion Detection in Android - Howto](https://www.codeproject.com/Articles/791145/Motion-Detection-in-Android-Howto)
 
 [Single Page Application (SPA) for Enterprise App (Angular2 & WebApi)](https://www.codeproject.com/Articles/1139558/Single-Page-Application-SPA-for-Enterprise-App-Ang)
+
+[Let's build a browser engine!](https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html)
