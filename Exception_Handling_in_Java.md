@@ -175,3 +175,130 @@ Example of throw IOException.
  Output:
 
     Exception in thread main java.lang.ArithmeticException:not valid
+    
+### Java throws keyword
+
+The Java throws keyword is used to declare an exception. It gives an information to the programmer that there may occur an exception so it is better for the programmer to provide the exception handling code so that normal flow can be maintained.
+
+Exception Handling is mainly used to handle the checked exceptions. If there occurs any unchecked exception such as NullPointerException, it is programmers fault that he is not performing check up before the code being used.
+
+### Syntax of java throws
+
+        return_type method_name() throws exception_class_name{  
+        //method code  
+        }  
+        
+### Which exception should be declared
+
+Ans) checked exception only, because:
+
+unchecked Exception: under your control so correct your code.
+error: beyond your control e.g. you are unable to do anything if there occurs VirtualMachineError or StackOverflowError.  
+
+### Advantage of Java throws keyword
+
+- Now Checked Exception can be propagated (forwarded in call stack).
+
+- It provides information to the caller of the method about the exception.
+
+### Difference between throw and throws in Java
+    throw	                                                             throws
+    1)	Java throw keyword is used to explicitly throw an exception.	Java throws keyword is used to declare an exception.
+    2)	Checked exception cannot be propagated using throw only.	    Checked exception can be propagated with throws.
+    3)	Throw is followed by an instance.	                            Throws is followed by class.
+    4)	Throw is used within the method.	                            Throws is used with the method signature.
+    5)	You cannot throw multiple exceptions.	                         You can declare multiple exceptions e.g.
+                                                                         public void method()throws IOException,SQLException.
+    
+### Java throw example
+
+void m(){  
+throw new ArithmeticException("sorry");  
+}  
+
+### Java throws example
+
+void m()throws ArithmeticException{  
+//method code  
+}  
+
+### Java throw and throws example
+
+void m()throws ArithmeticException{  
+throw new ArithmeticException("sorry");  
+}  
+     
+### Difference between final, finally and finalize
+
+1)	Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final method can't be overridden and final variable value can't be changed.	
+Finally is used to place important code, it will be executed whether exception is handled or not.	
+Finalize is used to perform clean up processing just before object is garbage collected.
+
+2)	Final is a keyword.	Finally is a block.	Finalize is a method.
+
+### Java final example
+
+    class FinalExample{  
+    public static void main(String[] args){  
+    final int x=100;  
+    x=200;//Compile Time Error  
+    }}  
+    
+### Java finally example
+
+    class FinallyExample{  
+    public static void main(String[] args){  
+    try{  
+    int x=300;  
+    }catch(Exception e){System.out.println(e);}  
+    finally{System.out.println("finally block is executed");}  
+    }} 
+    
+### Java finalize example
+
+    class FinalizeExample{  
+    public void finalize(){System.out.println("finalize called");}  
+    public static void main(String[] args){  
+    FinalizeExample f1=new FinalizeExample();  
+    FinalizeExample f2=new FinalizeExample();  
+    f1=null;  
+    f2=null;  
+    System.gc();  
+    }}  
+    
+### Java Custom Exception
+If you are creating your own Exception that is known as custom exception or user-defined exception. Java custom exceptions are used to customize the exception according to user need.
+
+By the help of custom exception, you can have your own exception and message.
+
+Let's see a simple example of java custom exception.
+
+    class InvalidAgeException extends Exception{  
+     InvalidAgeException(String s){  
+      super(s);  
+     }  
+    }  
+    
+    class TestCustomException1{  
+
+       static void validate(int age)throws InvalidAgeException{  
+         if(age<18)  
+          throw new InvalidAgeException("not valid");  
+         else  
+          System.out.println("welcome to vote");  
+       }  
+
+       public static void main(String args[]){  
+          try{  
+          validate(13);  
+          }catch(Exception m){System.out.println("Exception occured: "+m);}  
+
+          System.out.println("rest of the code...");  
+      }  
+    }      
+    
+ Output:
+ 
+        Exception occured: InvalidAgeException:not valid
+        rest of the code...
+        
