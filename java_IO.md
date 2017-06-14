@@ -42,10 +42,10 @@ An output stream accepts output bytes and sends them to some sink.
 
 ### Useful methods of OutputStream
 
-1) public void write(int)throws IOException	is used to write a byte to the current output stream.
-2) public void write(byte[])throws IOException	is used to write an array of byte to the current output stream.
-3) public void flush()throws IOException	flushes the current output stream.
-4) public void close()throws IOException	is used to close the current output stream.
+- public void write(int)throws IOException	is used to write a byte to the current output stream.
+- public void write(byte[])throws IOException	is used to write an array of byte to the current output stream.
+- public void flush()throws IOException	flushes the current output stream.
+- public void close()throws IOException	is used to close the current output stream.
 
 ### OutputStream Hierarchy
 
@@ -57,9 +57,9 @@ InputStream class is an abstract class. It is the super class of all classes rep
 
 ### Useful methods of InputStream
 
-1) public abstract int read()throws IOException	reads the next byte of data from the input stream. It returns -1 at the end of file.
-2) public int available()throws IOException	returns an estimate of the number of bytes that can be read from the current input stream.
-3) public void close()throws IOException	is used to close the current input stream.
+- public abstract int read()throws IOException	reads the next byte of data from the input stream. It returns -1 at the end of file.
+- public int available()throws IOException	returns an estimate of the number of bytes that can be read from the current input stream.
+- public void close()throws IOException	is used to close the current input stream.
 
 ### InputStream Hierarchy
 
@@ -126,20 +126,56 @@ Let's see the declaration for Java.io.FileOutputStream class:
  
 ### Java FileInputStream example
 
-import java.io.FileInputStream;  
-public class DataStreamExample {  
-     public static void main(String args[]){    
-          try{    
-            FileInputStream fin=new FileInputStream("D:\\testout.txt");  
-            //read single character
-            int j=fin.read();  
-            System.out.print((char)j);    
-           //read all characters
-           int i=0;    
-            while((i=fin.read())!=-1){    
-             System.out.print((char)i);    
-            }    
-            fin.close();    
-          }catch(Exception e){System.out.println(e);}    
-         }    
-        }  
+    import java.io.FileInputStream;  
+    public class DataStreamExample {  
+         public static void main(String args[]){    
+              try{    
+                FileInputStream fin=new FileInputStream("D:\\testout.txt");  
+                //read single character
+                int j=fin.read();  
+                System.out.print((char)j);    
+               //read all characters
+               int i=0;    
+                while((i=fin.read())!=-1){    
+                 System.out.print((char)i);    
+                }    
+                fin.close();    
+              }catch(Exception e){System.out.println(e);}    
+             }    
+            }  
+
+### Java BufferedOutputStream Class
+ava BufferedOutputStream class is used for buffering an output stream. It internally uses buffer to store data. It adds more efficiency than to write data directly into a stream. So, it makes the performance fast.
+
+For adding the buffer in an OutputStream, use the BufferedOutputStream class. Let's see the syntax for adding the buffer in an OutputStream:
+
+    OutputStream os= new BufferedOutputStream(new FileOutputStream("D:\\IO Package\\testout.txt"));  
+    
+### Java BufferedOutputStream class declaration
+
+Let's see the declaration for Java.io.BufferedOutputStream class:
+
+    public class BufferedOutputStream extends FilterOutputStream  
+    
+### Java BufferedOutputStream class methods
+- void write(int b)	It writes the specified byte to the buffered output stream.
+- void write(byte[] b, int off, int len)	It write the bytes from the specified byte-input stream into a specified byte array, starting with the given offset
+- void flush()	It flushes the buffered output stream.
+
+### Example of BufferedOutputStream class
+
+    public class BufferedOutputStreamExample{    
+    public static void main(String args[])throws Exception{    
+         FileOutputStream fout=new FileOutputStream("D:\\testout.txt");    
+         BufferedOutputStream bout=new BufferedOutputStream(fout);    
+         String s="hello world.";    
+         byte b[]=s.getBytes();    
+         bout.write(b);    
+         bout.flush();    
+         bout.close();    
+         fout.close();    
+         System.out.println("success");    
+    }    
+    }  
+    
+    
