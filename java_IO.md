@@ -179,3 +179,162 @@ Let's see the declaration for Java.io.BufferedOutputStream class:
     }  
     
     
+### Java BufferedInputStream Class
+Java BufferedInputStream class is used to read information from stream. It internally uses buffer mechanism to make the performance fast.
+
+The important points about BufferedInputStream are:
+
+- When the bytes from the stream are skipped or read, the internal buffer automatically refilled from the contained input stream, many     bytes at a time.
+- When a BufferedInputStream is created, an internal buffer array is created.
+
+### Java BufferedInputStream class declaration
+
+        public class BufferedInputStream extends FilterInputStream  
+        
+### Example of Java BufferedInputStream
+
+        public class BufferedInputStreamExample{    
+         public static void main(String args[]){    
+          try{    
+            FileInputStream fin=new FileInputStream("D:\\testout.txt");    
+            BufferedInputStream bin=new BufferedInputStream(fin);    
+            int i;    
+            while((i=bin.read())!=-1){    
+             System.out.print((char)i);    
+            }    
+            bin.close();    
+            fin.close();    
+          }catch(Exception e){System.out.println(e);}    
+         }    
+        } 
+        
+### Serialization in Java
+Serialization in java is a mechanism of writing the state of an object into a byte stream.
+
+It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+
+The reverse operation of serialization is called deserialization.
+
+### Advantage of Java Serialization
+
+It is mainly used to travel object's state on the network (known as marshaling).
+
+![serialization](https://www.javatpoint.com/images/core/java-serialization.png)
+
+### java.io.Serializable interface
+Serializable is a marker interface (has no data member and method). It is used to "mark" java classes so that objects of these classes may get certain capability. The Cloneable and Remote are also marker interfaces.
+
+It must be implemented by the class whose object you want to persist.
+
+The String class and all the wrapper classes implements java.io.Serializable interface by default.
+
+####  example 
+
+    import java.io.Serializable;  
+    public class Student implements Serializable{  
+     int id;  
+     String name;  
+     public Student(int id, String name) {  
+      this.id = id;  
+      this.name = name;  
+     }  
+    }  
+    
+In the above example, Student class implements Serializable interface. Now its objects can be converted into stream.
+
+###  ObjectOutputStream class
+
+The ObjectOutputStream class is used to write primitive data types and Java objects to an OutputStream. Only objects that support the java.io.Serializable interface can be written to streams.
+
+### Important Methods
+
+
+- public final void writeObject(Object obj) throws IOException {}	writes the specified object to the ObjectOutputStream.
+- public void flush() throws IOException {}	flushes the current output stream.
+- public void close() throws IOException {}	closes the current output stream.
+
+### Example of Java Serialization
+
+    class Persist{  
+     public static void main(String args[])throws Exception{  
+      Student s1 =new Student(211,"ravi");  
+
+      FileOutputStream fout=new FileOutputStream("f.txt");  
+      ObjectOutputStream out=new ObjectOutputStream(fout);  
+
+      out.writeObject(s1);  
+      out.flush();  
+      System.out.println("success");  
+     }  
+    }  
+    
+### Deserialization in java
+
+Deserialization is the process of reconstructing the object from the serialized state.It is the reverse operation of serialization.
+
+### ObjectInputStream class
+
+An ObjectInputStream deserializes objects and primitive data written using an ObjectOutputStream.
+
+### Important Methods
+
+- public final Object readObject() throws IOException, ClassNotFoundException{}	reads an object from the input stream.
+- public void close() throws IOException {}	closes ObjectInputStream.
+
+### Example of Java Deserialization
+
+    import java.io.*;  
+    class Depersist{  
+     public static void main(String args[])throws Exception{  
+
+      ObjectInputStream in=new ObjectInputStream(new FileInputStream("f.txt"));  
+      Student s=(Student)in.readObject();  
+      System.out.println(s.id+" "+s.name);  //output: 211 ravi
+
+      in.close();  
+     }  
+    }  
+    
+### Java Serialization with Inheritance (IS-A Relationship)
+
+If a class implements serializable then all its sub classes will also be serializable.
+
+### Java Serialization with Aggregation (HAS-A Relationship)
+
+If a class has a reference of another class, all the references must be Serializable otherwise serialization process will not be performed. In such case, NotSerializableException is thrown at runtime.
+
+### Java Serialization with static data member
+
+If there is any static data member in a class, it will not be serialized because static is the part of class not object.
+#### example:
+    class Employee implements Serializable{  
+     int id;  
+     String name;  
+     static String company="SSS IT Pvt Ltd";//it won't be serialized  
+     public Student(int id, String name) {  
+      this.id = id;  
+      this.name = name;  
+     }  
+    }  
+    
+### Java Serialization with array or collection
+
+Rule: In case of array or collection, all the objects of array or collection must be serializable. If any object is not serialiizable, serialization will be failed.
+
+### Java Transient Keyword
+
+Java transient keyword is used in serialization. If you define any data member as transient, it will not be serialized.
+If you deserialize the object, you will get the default value for transient variable.
+
+#### Example of Java Transient Keyword
+
+    public class Student implements Serializable{  
+     int id;  
+     String name;  
+     transient int age;//Now it will not be serialized  
+     public Student(int id, String name,int age) {  
+      this.id = id;  
+      this.name = name;  
+      this.age=age;  
+     }  
+     
