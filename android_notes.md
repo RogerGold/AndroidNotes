@@ -94,3 +94,4 @@
 93. [Java JDBC](https://github.com/RogerGold/AndroidNotes/blob/master/Java_JDBC.md)
 94. [Exception Handling in Java](https://github.com/RogerGold/AndroidNotes/blob/master/Exception_Handling_in_Java.md)
 95. [java IO](https://github.com/RogerGold/AndroidNotes/blob/master/java_IO.md)
+96. [Java String](https://github.com/RogerGold/AndroidNotes/blob/master/Java_String.md)
