@@ -19,3 +19,28 @@ Right-click on your application and use Export > WAR File option and save your H
 - Replace "8080" by your port number
 - Restart tomcat server.
 
+### Starting and Stopping the Tomcat Server
+
+This appendix describes how to start and stop the Tomcat server from a command line prompt as follows:
+
+Go to the appropriate subdirectory of the EDQP Tomcat installation directory. The default directories are:
+
+- On Linux: /opt/Oracle/Middleware/opdq/server/tomcat/bin
+
+- On Windows: c:\Oracle\Middleware\opdq\server\tomcat\bin
+
+Where server is the name of your Oracle DataLens Server.
+
+Run the startup command:
+
+- On Linux: ./startup.sh
+
+- On Windows: % startup.bat
+
+Verify that the service was started correctly by looking for the final server startup messages.
+
+Likewise, the Tomcat Server can be stopped from the command line with the following command:
+
+- On Linux: ./shutdown.sh
+
+- On Windows: % shutdown.bat
