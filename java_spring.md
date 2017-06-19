@@ -1,8 +1,11 @@
 # Spring MVC
 
 ### Environment Setup
+
 [set Tomcat as server](http://javahonk.com/javax-servlet-http-httpservlet-was-not-found-on-the-java-build-path/)
+
 [HttpServlet was not found error](http://howtodoinjava.com/tools/eclipse/solved-the-superclass-javax-servlet-http-httpservlet-was-not-found-on-the-java-build-path-in-eclipse/)
+
 [spring mvc basic](https://www.tutorialspoint.com/spring/spring_mvc_hello_world_example.htm)
 
 Once you are done creating the source and configuration files, export your application. 
