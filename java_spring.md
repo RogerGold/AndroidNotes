@@ -44,3 +44,13 @@ Likewise, the Tomcat Server can be stopped from the command line with the follow
 - On Linux: ./shutdown.sh
 
 - On Windows: % shutdown.bat
+
+### HTTP Status 404 is the name given to Page Not Found Error.
+
+This error occurs due to a basic fault that is the webpage for that link which is opened is not found or doesn’t exist. The reason for a missing webpage can be many as follows:
+
+- Error in network connection, due to which the requested page was not found.
+- Error in link
+- Error in extension of the requested page, i.e., index.htm can be mistakenly written as index.html
+- Sometimes error in GET and POST messages also lead to Error 404.
+- Page deleted from server or moved to some other address location
