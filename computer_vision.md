@@ -79,3 +79,5 @@
 [How to Establish a Different Picture of the Android Camera by Image Processing (Gray and Comic)?](https://www.codeproject.com/Tips/867282/How-to-Establish-a-Different-Picture-of-the-Androi)
 
 [Dlib is a modern C++ toolkit containing machine learning algorithms](http://dlib.net/)
+
+[Art-Image-Processing-Java](https://www.amazon.com/Art-Image-Processing-Java/dp/1568817177)
