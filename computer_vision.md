@@ -77,3 +77,5 @@
 [Android Character Recognition](https://www.codeproject.com/Articles/840623/Android-Character-Recognition)
 
 [How to Establish a Different Picture of the Android Camera by Image Processing (Gray and Comic)?](https://www.codeproject.com/Tips/867282/How-to-Establish-a-Different-Picture-of-the-Androi)
+
+[Dlib is a modern C++ toolkit containing machine learning algorithms](http://dlib.net/)
