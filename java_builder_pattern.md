@@ -254,3 +254,5 @@ ref
 [java-model-objects-design](https://stackoverflow.com/questions/16458092/java-model-objects-design)
 
 [immutable.html](https://docs.oracle.com/javase/tutorial/essential/concurrency/immutable.html)
+
+[Mutable and Immutable Objects](http://www.javaranch.com/journal/2003/04/immutable.htm)
