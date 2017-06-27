@@ -249,3 +249,4 @@ especially if most of those parameters are optional. You get client code that is
 
 Additionally, your classes can remain immutable which makes your code safer.
 
+ref [java-model-objects-design](https://stackoverflow.com/questions/16458092/java-model-objects-design)
