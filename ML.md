@@ -19,3 +19,5 @@
 [the-best-machine-learning-blogs](https://www.quora.com/What-are-the-best-machine-learning-blogs-or-resources-available)
 
 [ math & machine learning](http://blog.echen.me/)
+
+[colah's blog](http://colah.github.io/)
