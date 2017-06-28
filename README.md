@@ -27,3 +27,5 @@
 12. [Design](https://github.com/RogerGold/AndroidNotes/blob/master/design.md)
 
 13. [NLP](https://github.com/RogerGold/AndroidNotes/blob/master/NLP.md)
+
+14. [Machine Learning](https://github.com/RogerGold/AndroidNotes/blob/master/ML.md)
