@@ -21,3 +21,5 @@
 [ math & machine learning](http://blog.echen.me/)
 
 [colah's blog](http://colah.github.io/)
+
+[chrislord.net](http://chrislord.net/)
