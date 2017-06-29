@@ -23,3 +23,5 @@
 [colah's blog](http://colah.github.io/)
 
 [chrislord.net](http://chrislord.net/)
+
+[java ML](http://java-ml.sourceforge.net/)
