@@ -7,6 +7,8 @@
 
 [courear: machine-learning](https://cn.udacity.com/mlnd/)
 
+[languages-and-libraries-for-machine-learning](http://blog.udacity.com/2016/04/languages-and-libraries-for-machine-learning.html)
+
 [deeplearningbook](http://www.deeplearningbook.org/)
 
 [mlyearning](http://www.mlyearning.org/)
