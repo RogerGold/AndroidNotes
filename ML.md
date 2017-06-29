@@ -33,3 +33,5 @@
 
 
 [java-machine-learning](http://machinelearningmastery.com/java-machine-learning/)
+
+[Unsupervised Feature Learning and Deep Learning](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
