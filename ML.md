@@ -25,3 +25,6 @@
 [chrislord.net](http://chrislord.net/)
 
 [java ML](http://java-ml.sourceforge.net/)
+
+
+[java-machine-learning](http://machinelearningmastery.com/java-machine-learning/)
