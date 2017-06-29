@@ -34,6 +34,10 @@
 
 [ImageJ是一个基于java的公共的图像处理软件](https://imagej.net/Welcome)
 
+[Boofcv](https://boofcv.org/index.php?title=Main_Page)
+
+[openCV](http://opencv.org/)
+
 [ImageJ维基百科](https://zh.wikipedia.org/wiki/ImageJ)
 
 [Java Digital Image Processing Tutorial](http://www.tutorialspoint.com/java_dip/)
