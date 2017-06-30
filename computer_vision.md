@@ -85,3 +85,8 @@
 [Dlib is a modern C++ toolkit containing machine learning algorithms](http://dlib.net/)
 
 [Art-Image-Processing-Java](https://www.amazon.com/Art-Image-Processing-Java/dp/1568817177)
+
+[android SKIA](https://skia.org/)
+
+[android graphics subsystem](https://www.imgtec.com/blog/learning-about-the-android-graphics-subsystem/)
+
