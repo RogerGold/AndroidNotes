@@ -96,3 +96,4 @@
 95. [java IO](https://github.com/RogerGold/AndroidNotes/blob/master/java_IO.md)
 96. [Java String](https://github.com/RogerGold/AndroidNotes/blob/master/Java_String.md)
 97. [Java builder pattern](https://github.com/RogerGold/AndroidNotes/blob/master/java_builder_pattern.md)
+98. [Java Memory Model](https://github.com/RogerGold/AndroidNotes/blob/master/JavaMemoryModel.md)
