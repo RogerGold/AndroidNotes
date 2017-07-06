@@ -14,6 +14,8 @@
 
 [数值计算方法](http://www.icourses.cn/jpk/viewCharacterDetail.action?sectionId=17496&courseId=3756)
 
+[针对色盲的图像处理](http://www.vischeck.com/)
+
 [Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/index.html)
 
 [stackoverflow: android image processing tutorial](https://stackoverflow.com/questions/6078839/android-image-processing-tutorial)
