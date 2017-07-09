@@ -23,6 +23,7 @@
 
 ## Java Spring
 
+### [Eclipse中的Web项目自动部署到Tomcat](http://www.cnblogs.com/ywl925/p/3815173.html)
 ### [详解eclipse下创建第一个spring boot项目](http://www.jb51.net/article/111546.htm)
 ### [java spring basic](https://www.tutorialspoint.com/spring/spring_overview.htm)
 ### [Spring Tutorial](https://www.javatpoint.com/spring-tutorial)
