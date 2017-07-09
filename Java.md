@@ -170,3 +170,8 @@
 ### [The Image Library](http://homepages.inf.ed.ac.uk/rbf/HIPR2/hipr_top.htm)
 ### [roborealm: image lib](http://www.roborealm.com/screenshots/index.php)
 ### [Images with all colors](https://codegolf.stackexchange.com/questions/22144/images-with-all-colors)
+
+## 构建微服务
+
+### [introduction-to-microservices](https://www.nginx.com/blog/introduction-to-microservices/)
+### [microservices.io](http://microservices.io/)
