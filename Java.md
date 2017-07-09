@@ -175,3 +175,4 @@
 
 ### [introduction-to-microservices](https://www.nginx.com/blog/introduction-to-microservices/)
 ### [microservices.io](http://microservices.io/)
+### [微服务架构模式简介](http://blog.jobbole.com/96948/)
