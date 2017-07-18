@@ -34,5 +34,6 @@
 
 ### 人工神经网络
 假设每个神经元都有一个激发概率，同时假设一个神经元与其他m个神经元相连，所以这个神经元能接收到m个信号输入 "x1 …. … xm"，看起来像这样：
+
 ![nn1](https://www.codeproject.com/KB/AI/NeuralNetwork_1/nn1.png)
 
