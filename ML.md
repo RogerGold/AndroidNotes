@@ -33,6 +33,11 @@
 
 [Unsupervised Feature Learning and Deep Learning](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
 
+## 学习资料大全
+[deeplearning4j](https://deeplearning4j.org/cn/ai-machinelearning-deeplearning)
+[人工智能(AI)资料大全](http://www.techug.com/post/awesome-artificial-intelligence.html)
+[AI学习图谱](https://learn-anything.xyz/artificial-intelligence)
+
 ## google研究院
 [googleblog](https://research.googleblog.com/)
 
