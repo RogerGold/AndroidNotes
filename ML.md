@@ -19,8 +19,6 @@
 
 [UnderstandingMachineLearning](http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/)
 
-[!!Jason Brownlee Blog](http://machinelearningmastery.com/about/)
-
 [the-best-machine-learning-blogs](https://www.quora.com/What-are-the-best-machine-learning-blogs-or-resources-available)
 
 [ math & machine learning](http://blog.echen.me/)
@@ -31,7 +29,12 @@
 
 [java ML](http://java-ml.sourceforge.net/)
 
-
 [java-machine-learning](http://machinelearningmastery.com/java-machine-learning/)
 
 [Unsupervised Feature Learning and Deep Learning](http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial)
+
+## 大牛博客
+
+[!!Jason Brownlee Blog](http://machinelearningmastery.com/about/)
+
+[!!Yann LeCun Blog](http://yann.lecun.com/)
