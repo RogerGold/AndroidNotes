@@ -14,6 +14,8 @@
 
 [数值计算方法](http://www.icourses.cn/jpk/viewCharacterDetail.action?sectionId=17496&courseId=3756)
 
+[Visualizing Algorithms可视化算法](https://bost.ocks.org/mike/algorithms/)
+
 [针对色盲的图像处理](http://www.vischeck.com/)
 
 [Android Tutorials for Mobile Image Processing](http://web.stanford.edu/class/ee368/Android/index.html)
