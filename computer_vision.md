@@ -4,6 +4,8 @@
 
 [Application of deep learning to computer vision](https://www.coursera.org/learn/ml-foundations/lecture/xpkT7/application-of-deep-learning-to-computer-vision)
 
+[computer vision blog](http://www.computervisionblog.com/)
+
 [Informatics Lecture Video Recordings](http://groups.inf.ed.ac.uk/vision/VIDEO/)
 
 [Digital Image Processing](https://www.tutorialspoint.com/dip/)
