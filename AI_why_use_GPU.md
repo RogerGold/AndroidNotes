@@ -8,3 +8,4 @@ On the other hand, a GPU is designed for heavy workload and throughput. It is de
 
 Something special about neural networks is that the dot product between the weights and input at every neuron can be run in parallel and the thousands of cores inside a GPU is a perfect candidate for such tasks.
 
+In other words,the reasons for the overperformance of the GPU compared to the CPU: Deep Learning involves a huge amount of matrix and vector operations, mostly multiplications that can be massively parallelized, which implies speed up on GPUs. This is because GPUs were designed to handle these matrix operations in parallel, as this is essential for computer games for e.g. 3D effects, land rendering, etc. On the other hand, a single core CPU would take a matrix operation in serial, one element at a time. A single GPU could have hundreds or thousands of cores, while a CPU typically has no more than a few cores (between two and eight).
