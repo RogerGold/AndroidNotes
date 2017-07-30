@@ -2,7 +2,6 @@
 
 [kailashahirwar](https://github.com/kailashahirwar/cheatsheets-ai)
 
-
 [coursera: machine-learning](https://www.coursera.org/learn/machine-learning)
 
 [courear: machine-learning](https://cn.udacity.com/mlnd/)
@@ -46,3 +45,5 @@
 [!!Jason Brownlee Blog](http://machinelearningmastery.com/about/)
 
 [!!Yann LeCun Blog](http://yann.lecun.com/)
+
+[blog.otoro](http://blog.otoro.net/)
