@@ -104,3 +104,4 @@
 103. [The JSR-133 Cookbook for Compiler Writers](http://gee.cs.oswego.edu/dl/jmm/cookbook.html)
 104. [android-custom-view-tutorial](https://www.intertech.com/Blog/android-custom-view-tutorial-part-1-combining-existing-views/)
 105. [android-animations](http://hiqes.com/android-animations-pt1/)
+106. [Android Performance Patterns: Rescue tips](https://android.jlelse.eu/android-performance-patterns-rescue-tips-8c1e4c7cb1f0)
