@@ -106,3 +106,4 @@
 105. [android-animations](http://hiqes.com/android-animations-pt1/)
 106. [Android Performance Patterns: Rescue tips](https://android.jlelse.eu/android-performance-patterns-rescue-tips-8c1e4c7cb1f0)
 107. [Designing Android apps to handle slow network speed](https://medium.com/@tosinmath007/designing-android-apps-to-handle-slow-network-speed-dedc04119aac)
+108. [优化Android内存使用](https://software.intel.com/en-us/android/articles/tips-for-optimizing-android-application-memory-usage)
