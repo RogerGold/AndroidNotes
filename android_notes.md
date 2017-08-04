@@ -108,3 +108,4 @@
 107. [Designing Android apps to handle slow network speed](https://medium.com/@tosinmath007/designing-android-apps-to-handle-slow-network-speed-dedc04119aac)
 108. [优化Android内存使用](https://software.intel.com/en-us/android/articles/tips-for-optimizing-android-application-memory-usage)
 109. [优化UI](https://academy.realm.io/posts/360andev-brenda-cook-optimizing-profiling-ui-performance-android-ux/)
+110. [android-performance-tips-tools](https://www.toptal.com/android/android-performance-tips-tools)
