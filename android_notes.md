@@ -109,3 +109,4 @@
 108. [优化Android内存使用](https://software.intel.com/en-us/android/articles/tips-for-optimizing-android-application-memory-usage)
 109. [优化UI](https://academy.realm.io/posts/360andev-brenda-cook-optimizing-profiling-ui-performance-android-ux/)
 110. [android-performance-tips-tools](https://www.toptal.com/android/android-performance-tips-tools)
+111. [Android自绘控件开发与性能优化实践——以录音波浪动画为例](http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2017/0808/8357.html)
