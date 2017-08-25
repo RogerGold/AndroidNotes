@@ -97,7 +97,7 @@
 96. [Java String](https://github.com/RogerGold/AndroidNotes/blob/master/Java_String.md)
 97. [Java builder pattern](https://github.com/RogerGold/AndroidNotes/blob/master/java_builder_pattern.md)
 98. [Java Memory Model](https://github.com/RogerGold/AndroidNotes/blob/master/JavaMemoryModel.md)
-99 .[Warning! Threading in a multiprocessor world](http://www.javaworld.com/article/2074990/java-concurrency/warning--threading-in-a-multiprocessor-world.html)
+99. [Warning! Threading in a multiprocessor world](http://www.javaworld.com/article/2074990/java-concurrency/warning--threading-in-a-multiprocessor-world.html)
 100. [Lazy instantiation](http://www.javaworld.com/article/2077568/learn-java/java-tip-67--lazy-instantiation.html)
 101. [Do you know what synchronized really means?](http://www.javaworld.com/article/2074979/java-concurrency/double-checked-locking--clever--but-broken.html)
 102. [The "Double-Checked Locking is Broken" Declaration](http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html)
