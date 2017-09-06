@@ -115,3 +115,4 @@
 114. [Low-Level Graphics on Linux](http://betteros.org/tut/graphics1.php)
 115. [The Development of the C Language](https://www.bell-labs.com/usr/dmr/www/chist.html)
 116. [Writing a sqlite clone from scratch in C](https://cstack.github.io/db_tutorial/parts/part1.html)
+117. [AndroidStudioTips](https://github.com/RogerGold/AndroidNotes/blob/master/AndroidStudioTips.md)
