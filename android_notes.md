@@ -116,3 +116,5 @@
 115. [The Development of the C Language](https://www.bell-labs.com/usr/dmr/www/chist.html)
 116. [Writing a sqlite clone from scratch in C](https://cstack.github.io/db_tutorial/parts/part1.html)
 117. [AndroidStudioTips](https://github.com/RogerGold/AndroidNotes/blob/master/AndroidStudioTips.md)
+118. [How JavaScript works: an overview of the engine, the runtime, and the call stack](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
+119. [How JavaScript works: memory management + how to handle 4 common memory leaks](https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec)
