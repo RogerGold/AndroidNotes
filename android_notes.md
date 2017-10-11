@@ -120,3 +120,4 @@
 119. [How JavaScript works: memory management + how to handle 4 common memory leaks](https://blog.sessionstack.com/how-javascript-works-memory-management-how-to-handle-4-common-memory-leaks-3f28b94cfbec)
 120. [10 points about final modifier in Java](https://github.com/RogerGold/AndroidNotes/blob/master/FinalModifierinJava.md)
 121. [disk-io](https://medium.com/@ifesdjeen/on-disk-io-part-1-flavours-of-io-8e1ace1de017)
+122. [Reducing an Android APK's size](https://fractalwrench.co.uk/posts/playing-apk-golf-how-low-can-an-android-app-go/)
