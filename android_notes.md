@@ -122,3 +122,4 @@
 121. [disk-io](https://medium.com/@ifesdjeen/on-disk-io-part-1-flavours-of-io-8e1ace1de017)
 122. [Reducing an Android APK's size](https://fractalwrench.co.uk/posts/playing-apk-golf-how-low-can-an-android-app-go/)
 123. [how-to-become-a-complete-android-developer](https://blog.mindorks.com/how-to-become-a-complete-android-developer-110d7ef91f2a)
+124. [Android Application](https://luoxinjie.wordpress.com/)
