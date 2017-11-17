@@ -123,3 +123,4 @@
 122. [Reducing an Android APK's size](https://fractalwrench.co.uk/posts/playing-apk-golf-how-low-can-an-android-app-go/)
 123. [how-to-become-a-complete-android-developer](https://blog.mindorks.com/how-to-become-a-complete-android-developer-110d7ef91f2a)
 124. [Android Application](https://luoxinjie.wordpress.com/)
+125. [Java must know 1](https://github.com/RogerGold/AndroidNotes/edit/master/java_must_know_1.md)
