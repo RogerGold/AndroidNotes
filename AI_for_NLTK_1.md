@@ -1,4 +1,4 @@
-#MLTK学习笔记
+# MLTK学习笔记（1）
 
 ## NLTK是什么？
 [NLTK](http://www.nltk.org/index.html) is a leading platform for building Python programs to work with human language data.
@@ -31,13 +31,17 @@ NLTK 创建于2001 年，最初是宾州大学计算机与信息科学系计算�
     
 安装一些测试的数据，运行脚本，然后选择book，下载：
 
-   >>> import nltk
-   >>> nltk.download()
+   import nltk
+   nltk.download()
    
 检测一下，在输出欢迎信息之后，将会加载下载的book的文本
-    #加载一些我们刚才下载的book：
-   >>> from nltk.book import *
+   #加载一些我们刚才下载的book：
+   from nltk.book import *
    
+ ![book](https://github.com/RogerGold/media/blob/master/nltk_book.PNG)
+ 
 其他平台参考[install](http://www.nltk.org/install.html)   
 
+## 语言处理任务与相应NLTK 模块以及功能描述
+![function](https://github.com/RogerGold/media/blob/master/nltk_function.PNG)
 
