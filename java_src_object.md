@@ -32,6 +32,10 @@ ref: [Hashing](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Hashing/hashing.
 - 任何时候只要a.equals(b),那么a.hashCode()必须和b.hashCode()相等，如果两个对象相等而hashCode不等，那么就可以在HashSet中存入相等的两个对象。
 - 两者必须同时重写。
 
+当使用ORM的时候特别要注意的
+
+如果你使用ORM处理一些对象的话，你要确保在hashCode()和equals()对象中使用getter和setter而不是直接引用成员变量。因为在ORM中有的时候成员变量会被延时加载，这些变量只有当getter方法被调用的时候才真正可用。如果使用A.id == B.id则可能会出现这个问题，但是我们使用e1.getId() == e2.getId()就不会出现这个问题。
+
 - equals() must define an equivalence relation (it must be reflexive, symmetric, and transitive). In addition, it must be consistent (if the objects are not modified, then it must keep returning the same value). Furthermore, o.equals(null) must always return false.
 
 - hashCode() must also be consistent (if the object is not modified in terms of equals(), it must keep returning the same value).
@@ -40,3 +44,13 @@ The relation between the two methods is:
 
       Whenever a.equals(b), then a.hashCode() must be same as b.hashCode().
       
+ref: [重写hashCode和equals](https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java/27609#27609)
+
+### Why does Java's hashCode() in String use 31 as a multiplier?
+In Java, the hash code for a String object is computed as
+
+           s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]
+         
+The value 31 was chosen because it is an odd prime. If it were even and the multiplication overflowed, information would be lost, as multiplication by 2 is equivalent to shifting. The advantage of using a prime is less clear, but it is traditional. A nice property of 31 is that the multiplication can be replaced by a shift and a subtraction for better performance: 31 * i == (i << 5) - i. Modern VMs do this sort of optimization automatically.
+
+
