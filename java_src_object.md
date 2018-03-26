@@ -56,7 +56,7 @@ The value 31 was chosen because it is an odd prime. If it were even and the mult
 
 ## 总结
 
-  对于equals，我们必须遵循如下规则：
+      对于equals，我们必须遵循如下规则：
 
       对称性：如果x.equals(y)返回是“true”，那么y.equals(x)也应该返回是“true”。
 
@@ -81,3 +81,5 @@ The value 31 was chosen because it is an odd prime. If it were even and the mult
       如果x.equals(y)返回“true”，那么x和y的hashCode()必须相等。
 
       如果x.equals(y)返回“false”，那么x和y的hashCode()有可能相等，也有可能不等。
+      
+ref:[重写equals的陷阱](https://www.artima.com/lejava/articles/equality.html)
