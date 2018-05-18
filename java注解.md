@@ -109,16 +109,16 @@ Annotations仅仅是元数据，和业务逻辑无关。Annotations不包含业�
 输出结果：
 
 
-    /***********输出结果***************/
-    public class FruitRun {
+        /***********输出结果***************/
+        public class FruitRun {
 
-        public static void main(String[] args) {
+            public static void main(String[] args) {
 
-            FruitInfoUtil.getFruitInfo(Apple.class);
+                FruitInfoUtil.getFruitInfo(Apple.class);
+
+            }
 
         }
-
-    }
 
 ====================================
  水果名称：Apple
