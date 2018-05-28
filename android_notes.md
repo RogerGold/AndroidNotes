@@ -124,3 +124,4 @@
 123. [how-to-become-a-complete-android-developer](https://blog.mindorks.com/how-to-become-a-complete-android-developer-110d7ef91f2a)
 124. [Android Application](https://luoxinjie.wordpress.com/)
 125. [Java must know 1](https://github.com/RogerGold/AndroidNotes/edit/master/java_must_know_1.md)
+126. [Non-UI to UI Thread Communication](https://github.com/RogerGold/AndroidNotes/blob/master/Non-UI%20to%20UI%20Thread%20Communication.md)
