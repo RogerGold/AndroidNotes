@@ -89,7 +89,7 @@ First, create a Handler in the UI thread to receive and react to new messages se
             
             //add a property to hold the Handler subclass instance in the Activity.
             Handler resultHandler;
-            // from the activity’s onCreate() method, create an instance of the Handler so that it can start processing any incoming                 //messages from the non-UI thread.
+            // from the activity’s onCreate() method, create an instance of the Handler so that it can start processing any incoming messages from the non-UI thread.
             resultHandler = new HandlerExtension(this);
             
   The code here may look a little complex due to the static nature and WeakReference in the subclass.  If you try to create a simple class that extends Handler, you will find Eclipse and the SDK issues a compiler warning that the Handler class should be static or leaks might occur.
@@ -111,5 +111,60 @@ First, create a Handler in the UI thread to receive and react to new messages se
 ref [This Handler class should be static or leaks might occur: IncomingHandler
 ](https://stackoverflow.com/questions/11407943/this-handler-class-should-be-static-or-leaks-might-occur-incominghandler)  
 ### Use a Broadcasts and BroadcastReceiver (optionally with LocalBroadcastManager)
+Broadcasts are Android Intents that indicate some action has occurred.  Some broadcasts are system broadcasts.  For example, one of the built in Android broadcast is that the battery is low.  You can create your own custom broadcasts as well.
+
+Broadcast receivers are components in the application that listen for broadcasts and take some action.  You could, for example, build a broadcast receiver to listen for the battery getting low broadcast event in order to inform the user that unsaved data should be saved quickly.  Of course, you can also build a broadcast receiver to listen for your own custom application broadcasts.
+
+So, a broadcast and broadcast receiver can be used to accomplish the non-UI to UI thread communications.  The non-UI thread can publish a broadcast intent that a broadcast receiver associated to the UI thread uses to perform the UI update.
+
+Now, per the Android documentation on BroadcastReceivers, if your custom application broadcasts are not going to be used across applications, you should consider using a LocalBroadcastManager to send a local broadcast versus a system broadcast.  A LocalBroadcastManager’s intent broadcasts are not broadcast to other applications.  They are therefore a bit more efficient and secure than using a general broadcast message.
+
+Therefore, given the fact that the non-UI to UI thread communication is local to your application, I would recommend (and will show below) using the LocalBroadcastManager to perform the thread communications.
+
+First, from the non-UI thread, create an Intent that provides the necessary information to the UI thread about the user interface updates that are required.  In this example, the non-UI thread simply provides the new random number that was generated as extra data (under the key of “result”) in the Intent.  Then use an instance of Android’s LocalBroadcastManager to send the local broadcast.
+
+      Intent intent = new Intent("com.intertech.random.generation");
+      intent.putExtra("result", text);
+      LocalBroadcastManager.getInstance(ShowSomethingActivity.this).sendBroadcast(intent);
+
+Set a Broadcast Receiver Listening
+
+On the UI thread, you need to create an instance of BroadcastReceiver to listen for updates coming from the non-UI thread.  In this simple application, I created an anonymous BroadcastReceiver instance from within the createBroadcastRecevier() method which is called from the onCreate( ) method of the application’s main activity.
+
+      private BroadcastReceiver createBroadcastReceiver() {
+        return new BroadcastReceiver() {
+          @Override
+          public void onReceive(Context context, Intent intent) {
+            updateResults(intent.getStringExtra("result"));
+          }
+        };
+      }
+      
+The updateResults() method of the broadcast receiver gets the TextView and updates the string with what is in the broadcast’s extra data at “result”.
+
+Once the broadcast receiver is created in onCreate(), use a LocalBroadcastManager to register the UI thread for the broadcasts sent by the non-UI thread, specifically those with the string action of “com.intertech.random.generation”);
+
+      @Override
+      protected void onCreate(Bundle savedInstanceState) {
+        ...
+
+        resultReceiver = createBroadcastReceiver();
+        LocalBroadcastManager.getInstance(this).registerReceiver(resultReceiver, new IntentFilter("com.intertech.random.generation"));
+
+        ...
+      }
+      
+Now, once the non-UI thread publishes its local broadcast, the broadcast receiver listening for the message gets the Intent and takes on the responsibility of updating the UI on the UI thread.
+
+As a last bit of housekeeping, make sure to unregister the broadcast receiver when the communication between non-UI and UI threads is no longer needed.  In this example, I unregister the BroadcastReceiver in the onDestroy() method of the main activity.
+
+      protected void onDestroy() {
+        if (resultReceiver != null) {
+          LocalBroadcastManager.getInstance(this).unregisterReceiver(resultReceiver);
+        }
+        super.onDestroy();
+      }
+      
+The broadcast option is not reliant on the message event queue.  Instead it relies on a different Android set of components; namely the Intent and Intent listener called a broadcast receiver.  This sub-framework has pluses and minuses.  There are no convenience methods as provided through methods like post() and runOnUiThread() using the thread’s event queue.  Some consider working with Intents, BroadcastReceivers (and LocalBroadcastManager) a bit more complex.  However, the broadcast intent can conveniently carry quite a bit of data to the UI thread from the non-UI thread.  Also importantly, the non-UI thread and UI thread do not have to share any component knowledge.  So the non-UI thread is quite decoupled from the UI thread.  The only information shared by the two threads is the name of the intent action.
 
 ### Use an AsyncTask’s onProgressUpdate( ) method
