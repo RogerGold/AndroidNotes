@@ -23,6 +23,8 @@ In the DoSomethingThread’s publishProgress() method, the activity’s runOnUiT
 
 So the non-UI thread doesn’t actually update the UI (the TextView widget).  It sends a message via the runOnUiThread() call to the UI event queue.  The runOnUiThread() method is a convenience for completing this messaging operation.  The UI thread watches the event queue and eventually reacts to the request.
 
+What are the pros/cons when considering using the runOnUiThread.  First off, note that this method is defined on the Activity.  That means that the non-UI thread must have some knowledge or means of getting the Activity in order to take advantage of this method. 
+
 ### Use post( ) method call
 
 ### Use the Handler framework
