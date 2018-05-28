@@ -168,3 +168,88 @@ As a last bit of housekeeping, make sure to unregister the broadcast receiver wh
 The broadcast option is not reliant on the message event queue.  Instead it relies on a different Android set of components; namely the Intent and Intent listener called a broadcast receiver.  This sub-framework has pluses and minuses.  There are no convenience methods as provided through methods like post() and runOnUiThread() using the thread’s event queue.  Some consider working with Intents, BroadcastReceivers (and LocalBroadcastManager) a bit more complex.  However, the broadcast intent can conveniently carry quite a bit of data to the UI thread from the non-UI thread.  Also importantly, the non-UI thread and UI thread do not have to share any component knowledge.  So the non-UI thread is quite decoupled from the UI thread.  The only information shared by the two threads is the name of the intent action.
 
 ### Use an AsyncTask’s onProgressUpdate( ) method
+The AsyncTask is a special Android convenience class for creating a new Thread that can “publish results on the UI thread without having to manipulate threads and/or handlers.”  That last quote is directly from the AsyncTask class documentation in the Android reference guide.  In other words, the AsyncTask was explicitly built to provide Android developers with an easy way to create threads that have a direct communication channel back to the UI thread.
+
+In order to create an AsynTask, developers must extend the abstract AsyncTask super class and then implement the methods below.
+
+- doInBackground() – code here is executed on a new, non-UI thread that Android creates when the AsynTask is executed.  This is the only - required method of an AsyncTask subclass.
+- onPreExecute() – code executed on the UI thread by Android before non-UI thread work is executed in doInBackground() code.
+- onPostExecute() – code executed on the UI thread by Android after non-UI thread work is executed in doInBackground.
+- onProgressUpdate – called on the UI thread by Android whenever publishProgress(Progress…) is called (typically in the doInBackground method) to provide the user interface (and user) with updates while the separate thread is still running.
+
+Notice that three of four methods of the AsyncTask run on the UI thread.  The only method that runs in a non-UI thread is doInBackground().  So you can see the AsyncTask was really built to provide that non-UI to UI communications.
+
+      public class DoSomethingTask extends AsyncTask<Void, String, Void> {
+
+        private static final String TAG = "DoSomethingTask";
+        private static final int DELAY = 5000; // 5 seconds
+        private static final int RANDOM_MULTIPLIER = 10;
+
+        @Override
+        protected void onPreExecute() {
+         Log.v(TAG, "starting the Random Number Task");
+         super.onPreExecute();
+        }
+
+        @Override
+        protected void onProgressUpdate(String... values) {
+         Log.v(TAG, "reporting back from the Random Number Task");
+         updateResults(values[0].toString());
+         super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onCancelled(Void result) {
+         Log.v(TAG, "cancelled the Random Number Task");
+         super.onCancelled(result);
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+         Log.v(TAG, "doing work in Random Number Task");
+         String text="";
+         while (true) {
+          if (isCancelled()) {
+           break;
+          }
+          int randNum = (int) (Math.random() * RANDOM_MULTIPLIER);
+          text = String.format(getString(R.string.service_msg), randNum);
+          publishProgress(text);
+          try {
+           Thread.sleep(DELAY);
+          } catch (InterruptedException e) {
+           Log.v(TAG, "Interrupting the Random Number Task");
+          }
+         }
+         return null;
+        }
+      }
+
+Note the random number generation (as well as the thread sleeping) occurs in the doInBackground() method – again to simulate long running, continuous work that is often accomplished in a background thread.  Also note that the doInBackground() method calls postProgress() with new String data after it has generated a random number and wants to send this data back to the UI thread.
+
+DoSomethingTask extends AsyncTask and has three generic types.  The first, which in this example is Void, defines the input parameter type.  This simple task takes no input from the UI to generate a random number.  Your background work may need some information from the UI side to get it working and this parameter specifies the type of information being supplied.  This type defines the input parameter type for the doInBackground() method.
+
+The second AsyncTask generic type provided, which is a String here, is the type of data passed to the onProgressUpdate() method in publishProgess() calls made from doInBackground().  Here, the new random number generated by doInBackground() is passed back to the UI thread in order to update the display by passing the random number as String text to the onProgressUpdate() call.
+
+The last generic type to AsyncTask subclasses is the return type of the doInBackground() work.  In this case, the doInBackground() method does not return anything back to the UI thread (except through onProgressUpdate) so the third type is also Void.  Again, your non-UI threads may wish to return some information back to the thread’s creator and this is the type of information passed back.
+
+With this AsyncTask in place, the UI – namely the owning Activity that drives the application – can create an instance of the AsyncTask (DoSomethingTask) and have its background work begin by calling execute.  This work is accomplished in the startGenerating() method (below) which I have setup to be called by an onClickListener waiting for the Start button to be pushed.
+
+      private void startGenerating() {
+        randomWork = new DoSomethingTask();
+        randomWork.execute();
+      }
+
+Finally, the AsyncTask calls the Activity’s updateResult() method (below) from the onProgressUpdate() method when a new random number is generated and the UI TextView displaying the number needs to be updated.  Again, this is possible because the onProgressUpdate() method runs on the UI thread.
+
+      public void updateResults (String results){
+        mainFrag.getResultsTextView().setText(results);
+      }
+      
+Note additional cleanup methods are provided in the code to stop the AsyncTask when the Stop button is pushed. It should also be noted that this example was kept simple for demonstration sake.  Therefore, it has some faults you would want to correct in a real app situation.  For example, you might want to make sure only one AsyncTask is ever created (right now you could create many by clicking on Start many times).
+
+The AsyncTask is a real convenience for Android developers in that it allows them to accomplish multithreading without having to think about all the communications across threads and without having to think about Runnables, Thread instances, special methods to call, queues, etc. to get the work done.  The convenience of the three UI-thread methods makes getting information across the thread boundry real easy.  However, the AsyncTask is fairly basic and when more complex multithreading needs arise, it may be too simple to use.  In fact, the documentation is pretty clear about when to use AsyncTask and when to move to something like classes available in Java’s concurrent package.
+
+AsyncTasks should ideally be used for short operations (a few seconds at the most.) If you need to keep threads running for long periods of time, it is highly recommended you use the various APIs provided by the java.util.concurrent pacakge such as Executor, ThreadPoolExecutor and FutureTask.
+
+Good Android developers know it is important to use separate threads to avoid ANR.  The trick is sometimes figuring out how to get those threads communicating without creating other problems like CalledFromWrongThreadException.  Now you are armed with an understanding of thread communication options and considerations for making the best decision for your application needs.
