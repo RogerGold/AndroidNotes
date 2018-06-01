@@ -132,3 +132,6 @@ One particularity about the double linked list that I implemented is that I crea
             }
 
         }
+
+
+ref: [Hashtable + Double linked list](https://leetcode.com/problems/lru-cache/discuss/45911/Java-Hashtable-+-Double-linked-list-(with-a-touch-of-pseudo-nodes))
