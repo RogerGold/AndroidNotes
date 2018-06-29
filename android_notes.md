@@ -125,3 +125,4 @@
 124. [Android Application](https://luoxinjie.wordpress.com/)
 125. [Java must know 1](https://github.com/RogerGold/AndroidNotes/edit/master/java_must_know_1.md)
 126. [Non-UI to UI Thread Communication](https://github.com/RogerGold/AndroidNotes/blob/master/Non-UI%20to%20UI%20Thread%20Communication.md)
+127.[Capturing Bitmaps of Views in Android](https://arpitonline.com/2012/07/17/capturing-bitmaps-of-views-in-android/)
